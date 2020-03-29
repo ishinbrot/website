@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer'
+import {useLocation} from 'react-router-dom'
 
 // update for react hooks 
 const useStyles = makeStyles(theme => ({
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 export default function Header(props) {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
-
+  let location = useLocation();
   function handleClick(e) {
     e.preventDefault();
   
@@ -43,12 +44,13 @@ export default function Header(props) {
   return (
     
     <div className={classes.root}>
-      <AppBar position="static">
+      
+      <AppBar position="fixed">
         <Toolbar>
           <SideDrawer click={props.click}/>
          
           <Typography variant="h6" className={classes.title}>
-           {props.currentPage}
+           {(location.pathname).replace('/','')} - Ian Shinbrot
           </Typography>
           
         </Toolbar>

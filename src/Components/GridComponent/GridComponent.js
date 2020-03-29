@@ -9,7 +9,7 @@ const GridComponent = props => {
             {props.cards.map(el => (
                 <Grid container spacing={1} className={classes.container}>
                     <Grid container item xs={12} spacing={3}>
-                        <CardComponent title={el.title} description={el.description} linkTitle={el.linkTitle} />
+                        <CardComponent title={el.title} description={el.description} linkTitle={el.linkTitle} click={el.click} />
                     </Grid>
                 </Grid>
             ))

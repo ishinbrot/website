@@ -46,25 +46,25 @@ const SideDrawer = (props) => {
             onKeyDown={toggleDrawer(false)}
         >
             <List>
-                    <ListItem button key='Home'  onClick={() => props.click("Home")} component={Link} to="Home">
+                    <ListItem button key='Home'  component={Link} to="Home">
                         <ListItemIcon><HomeIcon /></ListItemIcon>
                         <ListItemText primary='Home'
-                            onClick={() => props.click("Home")} />
+                             />
                     </ListItem>
                 
-                    <ListItem button key='About'  onClick={() => props.click("About")} component={Link} to="about">
+                    <ListItem button key='About' component={Link} to="About">
                         <ListItemIcon><InfoIcon /></ListItemIcon>
                         <ListItemText primary='About'
                         />
                     </ListItem>
                 
-                    <ListItem button key='Projects'  onClick={() => props.click("Projects")} component={Link} to="Projects">
+                    <ListItem button key='Projects'  component={Link} to="Projects">
                         <ListItemIcon><WorkIcon /></ListItemIcon>
                         <ListItemText primary='Projects'
                         />
                     </ListItem>
             
-                    <ListItem button key='Contact'  onClick={() => props.click("Contact")} component={Link} to="Contact">
+                    <ListItem button key='Contact'  component={Link} to="Contact">
                         <ListItemIcon><EmailIcon /></ListItemIcon>
                         <ListItemText primary='Contact'
                         />

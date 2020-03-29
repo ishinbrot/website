@@ -18,7 +18,7 @@ const CardComponent = props => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">{props.linkTitle}</Button>
+                <Button size="small" onClick={props.click}>{props.linkTitle}</Button>
             </CardActions>
         </Card>
     );
