@@ -1,0 +1,10 @@
+.root {
+    min-width:  275px;
+    max-width: 350px;
+    display: inline-flex;
+    padding: 5;
+    display: inline-block;
+}
+.container {
+    display: flex
+}
