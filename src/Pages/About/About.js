@@ -49,16 +49,11 @@ const About = props => {
             description: ' \I have worked at many companies throughout the years. Click to see more information.',
             linkTitle: 'More Information',
             click: () => { displayModal() }
-        }, {
-            title: 'Projects',
-            description: 'Click to view my projects',
-            linkTitle: 'Projects',
-            click: () => { openLink("Projects") }
-        }, {
+        },{
             title: 'Resume',
             description: 'Please Check out my updated Resume',
             linkTitle: 'RESUME',
-            click: () => openLink('https://ishinbrot.github.io/ishinbrot/ianShinbrot_resume.pdf')
+            click: () => openLink('https://github.com/ishinbrot/website/raw/master/src/ianShinbrot_resume.pdf')
         }
     ]
 
