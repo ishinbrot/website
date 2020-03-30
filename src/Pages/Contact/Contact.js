@@ -9,7 +9,8 @@ const ContactCard = [
     {
         title: 'Contact Information',
         description: "Please click the link below to send me an email.",
-        linkTitle: 'Email'
+        linkTitle: 'Email',
+        link: "mailto:ianshinbro@gmail.com?Subject=Website Feedback"
     }
 ]
 
@@ -17,7 +18,7 @@ const Contact = props => {
     return (
         <div>
             {summary}
-            <GridComponent cards={ContactCard} />
+            <GridComponent cards={ContactCard}/>
         </div >
     );
 }

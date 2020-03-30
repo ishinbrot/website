@@ -39,7 +39,9 @@ export default function Header(props) {
     console.log('Drawer was open.');
   };
 
-  
+  const pageName = (location.pathname).includes('/')  ? 'Home   -   Ian Shinbrot'
+  : location.pathname.replace("/",'') +"  -   Ian Shinbrot";
+
   
   return (
     
@@ -50,7 +52,7 @@ export default function Header(props) {
           <SideDrawer click={props.click}/>
          
           <Typography variant="h6" className={classes.title}>
-           {(location.pathname).replace('/','')} - Ian Shinbrot
+           {pageName}
           </Typography>
           
         </Toolbar>

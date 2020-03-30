@@ -20,7 +20,7 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
     paper: {
       position: 'absolute',
-      width: 400,
+      width: 600,
       backgroundColor: theme.palette.background.paper,
       border: '2px solid #000',
       boxShadow: theme.shadows[5],
@@ -38,7 +38,7 @@ const CustomModal = props => {
             <h2 id="simple-modal-title">{props.title}</h2>
            
                {props.text}
-               
+               <br/>
                <Button onClick={props.click}>CLOSE</Button>
         </div>
     );

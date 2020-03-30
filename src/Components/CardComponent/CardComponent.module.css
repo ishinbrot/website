@@ -4,6 +4,8 @@
     display: inline-flex;
     padding: 5;
     display: inline-block;
+    max-height: 300px;
+    min-height: 200px;
 }
 .container {
     display: flex

@@ -15,7 +15,11 @@ Please click one of the below links to learn more information.</p>;
 
 const workExperienceSummary = <div>
     <h4>Equisoft</h4>
-              I currently work at Equisoft as a Software Developer working as a software cons
+              I currently work at Equisoft as a Software Developer working as a software consultant on various clients for the OIPA (Oracle Insurance Administration for Life and Annuitites) product.
+              I assist in mentoring new hires, as well as the various client teams in utilizing the OIPA application.
+              I have assisted of SSO implementations utilizing both SAML and Microsoft Azure AD, as well as various RESTful and Soap services.
+              I assist in managing the Nexus and ProGet
+              The main languages and frameworks I worked on have been Spring, Hibernate, Java.
 
 <h4>Lockheed Martin</h4>
               I currently work at Lockheed Martin as an Associate Software Engineer working on the LRDR radar system.
