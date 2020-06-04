@@ -34,7 +34,13 @@ const reactNavtiveProjectSummary = <div className={classes.Summary}>
 const reactNativeProjectList = [
     {
         title: 'SHOP',
-        description: "This application allows you to add itmes to a shopping list and create new orders. The application supports multiple users and everything is stored on firebase.",
+        description: "This application allows you to add items to a shopping list and create new orders. The application supports multiple users and everything is stored on firebase.",
+        linkTitle: 'Download',
+        click: () => openLink('https://github.com/ishinbrot/website/blob/master/src/Pages/Projects/SHOP.apk')
+    },
+    {
+        title: 'Places',
+        description: "This application allows you to take a picture and specify a location where the picture was taken. The phone is able to locate you by GPS, or you are able to select a location from google maps.",
         linkTitle: 'Download',
         click: () => openLink('https://github.com/ishinbrot/website/blob/master/src/Pages/Projects/SHOP.apk')
     },
