@@ -7,7 +7,7 @@ import Divider from '@material-ui/core/Divider';
 
 let projectList;
 const webProjectsSummary = <div className={classes.Summary}>
-    <h2>Web Projects</h2><p className={classes.Summary}>Please check out some of my projects below</p>
+    <h2>Web Projects</h2><p>Please check out some of my projects below</p>
 </div>;
 
 
@@ -26,28 +26,31 @@ const WebProjectList = [
         click: () => openLink('https://github.com/DrexelSeniorDesign2016Team8/FrontEnd')
     }
 ]
-/*
+
 const reactNavtiveProjectSummary = <div className={classes.Summary}>
     <h2>ReactNative Applications</h2>
     <p className={classes.Summary}>These are reactNative apps meant to be compatible with the iOS and Android OS. Only the Android APK will be able to be downloaded
 </p></div>;
 const reactNativeProjectList = [
     {
-        title: 'GuessANumber',
-        description: "This application is a basic game that is two players. On the initial screen you are prompted to enter a number. On the second screen you can guess if the number is greater or lower",
-        linkTitle: 'Download'
+        title: 'SHOP',
+        description: "This application allows you to add itmes to a shopping list and create new orders. The application supports multiple users and everything is stored on firebase.",
+        linkTitle: 'Download',
+        click: () => openLink('https://github.com/ishinbrot/website/blob/master/src/Pages/Projects/SHOP.apk')
     },
 ]
-*/
+
 const Projects = props => {
     return (
         <div>
-            <div className={classes.Summary}>
+            <div className={classes.Header}>
                 <p>This page is under active development. Please click the following button to be directed to my github page</p>
-                <Button className={classes.Summary} variant="outlined" onClick={() => { return window.location.href = "https://github.com/ishinbrot" }}>LINK TO GITHUB</Button>
+                <Button className={classes.Header} variant="outlined" onClick={() => { return window.location.href = "https://github.com/ishinbrot" }}>LINK TO GITHUB</Button>
             </div>
             {webProjectsSummary}
             <GridComponent cards={WebProjectList} />
+            {reactNavtiveProjectSummary}
+            <GridComponent cards={reactNativeProjectList} />
             <Divider />
 
          

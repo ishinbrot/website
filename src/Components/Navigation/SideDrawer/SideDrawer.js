@@ -63,7 +63,11 @@ const SideDrawer = (props) => {
                         <ListItemText primary='Projects'
                         />
                     </ListItem>
-            
+                    <ListItem button key='Poetry'  component={Link} to="Poetry">
+                        <ListItemIcon><WorkIcon /></ListItemIcon>
+                        <ListItemText primary='Poetry'
+                        />
+                    </ListItem>
                     <ListItem button key='Contact'  component={Link} to="Contact">
                         <ListItemIcon><EmailIcon /></ListItemIcon>
                         <ListItemText primary='Contact'

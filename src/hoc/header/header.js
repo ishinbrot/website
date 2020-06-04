@@ -39,8 +39,9 @@ export default function Header(props) {
     console.log('Drawer was open.');
   };
 
-  const pageName = (location.pathname).includes('/')  ? 'Home   -   Ian Shinbrot'
-  : location.pathname.replace("/",'') +"  -   Ian Shinbrot";
+  const pageName = (location.pathname.length===1) ? "Home - Ian Shinbrot" : (location.pathname.substring(1,location.pathname.length)) + " - Ian Shinbrot";
+  //const pageName = (location.pathname).includes('/')  ? 'Home   -   Ian Shinbrot'
+  //: location.pathname.replace("/",'') +"  -   Ian Shinbrot";
 
   
   return (

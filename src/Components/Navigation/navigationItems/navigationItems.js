@@ -23,6 +23,10 @@ const navigationItems = (props) => {
                 <ListItemIcon><WorkIcon /></ListItemIcon>
                 <ListItemText primary='Projects' />
             </ListItem>
+            <ListItem button key='Poetry'>
+                <ListItemIcon><WorkIcon /></ListItemIcon>
+                <ListItemText primary='Poetry' />
+            </ListItem>
             <ListItem button key='Contact'>
                 <ListItemIcon><EmailIcon /></ListItemIcon>
                 <ListItemText primary='Contact' />

@@ -7,7 +7,7 @@ import GridComponent from '../../Components/GridComponent/GridComponent'
 import CustomModal from '../../Components/Layout/CustomModal/CustomModal';
 
 
-const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently an Software Developer at Equisoft.
+const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently a Software Developer at Equisoft.
 <br />
 I graduated from Drexel in June 2016 with a bachelors degree in Computer Science. At Drexel, I have completed three different co-ops, 6-month internships.
 My first co-op was at Independence Blue Cross, while my second and third co-op were both at NextDocs, which was acquired by Aurea during my third co-op.

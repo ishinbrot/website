@@ -5,6 +5,7 @@ import About from '../../Pages/About/About';
 import Contact from '../../Pages/Contact/Contact';
 import Home from '../../Pages/Home/Home';
 import Projects from '../../Pages/Projects/Projects';
+import Poetry from '../../Pages/Poetry/Poetry';
 
 const Layout = (props) => {
 
@@ -17,6 +18,7 @@ const Layout = (props) => {
           <Route path="/Home" component={Home} exact />
           <Route path="/About" component={About} exact />
           <Route path="/Projects" component={Projects} exact />
+          <Route path="/Poetry" component={Poetry} exact />
           <Route path="/Contact" component={Contact} exact />
           <Route component={Home} />
         </Switch>
