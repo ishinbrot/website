@@ -38,7 +38,7 @@ Hopefully soon, we can give this virus the ax<br/>
 But for now We are stuck unless we find a portal</p>
 
 const CoronavirusSpringPoemText=<p>
-Welcome to Coroanvirus Spring<br/>
+Welcome to Coronavirus Spring<br/>
 Enjoy the weather getting hot<br/>
 But be careful, of what going outside may bring<br/>
 Go close to someone you should not<br/>
