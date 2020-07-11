@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { openLink } from '../../assets/helperFunctions'
 import classes from './About.module.css'
 import GridComponent from '../../Components/GridComponent/GridComponent'
-import CustomModal from '../../Components/Layout/CustomModal/CustomModal';
+import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 
 
 const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently a Software Developer at Equisoft.
@@ -63,7 +63,7 @@ const About = props => {
         <div>
             {summary}
             <GridComponent cards={AboutList} />
-            <CustomModal display={showModal} click={displayModal} text={workExperienceSummary} title="Work Experience" />
+            <CustomDialog display={showModal} click={displayModal} text={workExperienceSummary} title="Work Experience" />
         </div >
     );
 }
