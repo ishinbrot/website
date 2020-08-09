@@ -75,12 +75,12 @@ export default function Header(props) {
           <Typography variant="h6" className={classes.title}>
            {pageName}
           </Typography>
-          <Button color="inherit" onClick={setLoginDialogOpen}>Login</Button>
+  {true ?   <div></div>:   <Button color="inherit" onClick={setLoginDialogOpen}>Login</Button> }
         </Toolbar>
         
       </AppBar>
       <Dialog open={loginDialogOpen} onClose={handleLoginClose} aria-labelledby="form-dialog-title">
-      <DialogTitle id="form-dialog-title">Login</DialogTitle>
+    /*  <DialogTitle id="form-dialog-title">Login</DialogTitle>
         
         <DialogContent>
         {isLoading ? <CircularProgress/>
