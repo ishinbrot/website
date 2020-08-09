@@ -37,6 +37,43 @@ const Poems = [
     "It has grown thick all throughout\n"+
     "Let me try and go for a run\n"+
     "Will my hair get in my face, I highly doubt"
+    ),
+    new Poem("Case Count",
+    "The number of cases keeps shooting up\n"+
+    "The increase is happening in every state\n"+
+    "If you want to distract yourself just get a pup\n"+
+    "At least the number of death is decreasing at a decent rate\n"+
+    "Some states like Florida are just blowing up\n"+
+    "While other states like Pennsylvania are closing the gates\n"+
+    "We can just look at the numbers and go 'yup'\n"+
+    "At this point we leave it up to the fates" 
+    ),
+    new Poem("Masks",
+    "Why are we recommended to wear a mask\n" +
+    "For one simple reason and that’s to stop the spread\n" +
+    "To wear this on your face, is your one simple task\n"+
+    "Wearing this mask won’t cause you to drop dead\n"+
+    "Please just wear it is all I ask\n"+
+    "So we can work to stop the spread"
+    ),
+    new Poem("The year everything was cancelled",
+    "While covid keeps spreading around\n" +
+    "Our country had started to act\n"+
+    "Olympics, Museums, Movie-theaters all shut-down\n" +
+    "All the races such as broad street also had to react\n" +
+    "There was nothing to do except go all the way downtown\n" +
+    "But things started to open again, and people started to make contact\n" +
+    "Covid started to spread again, have we been let-down\n" +
+    "Wear a mask to limit the spread, it’s a fact"
+    ),
+    new Poem("Camp and Coronavirus",
+    "It’s nearing the end of summer break\n" +
+    "Summer camp is starting to end\n" +
+    "And what lies in it’s wake\n" +
+    "Coronavirus test results are becoming a trend\n" +
+    "Were you at camp, hanging out by the lake\n" +
+    "You probably got coronavirus and started a trend\n" +
+    "That’s when camp started to go on break"    
     )
 ];
 

@@ -8,6 +8,13 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer'
 import {useLocation} from 'react-router-dom'
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import TextField from '@material-ui/core/TextField';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 // update for react hooks 
 const useStyles = makeStyles(theme => ({
@@ -43,7 +50,20 @@ export default function Header(props) {
   //const pageName = (location.pathname).includes('/')  ? 'Home   -   Ian Shinbrot'
   //: location.pathname.replace("/",'') +"  -   Ian Shinbrot";
 
-  
+  const [loginDialogOpen, setLoginDialogOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const handleClickLogin = () => {
+    setLoginDialogOpen(true);
+  };
+
+  const handleLoginClose = () => {
+    setIsLoading(false);
+    setLoginDialogOpen(false);
+
+  };
+  const handleLogin = () => {
+    setIsLoading(true);
+  };
   return (
     
     <div className={classes.root}>
@@ -55,9 +75,50 @@ export default function Header(props) {
           <Typography variant="h6" className={classes.title}>
            {pageName}
           </Typography>
-          
+          <Button color="inherit" onClick={setLoginDialogOpen}>Login</Button>
         </Toolbar>
+        
       </AppBar>
+      <Dialog open={loginDialogOpen} onClose={handleLoginClose} aria-labelledby="form-dialog-title">
+      <DialogTitle id="form-dialog-title">Login</DialogTitle>
+        
+        <DialogContent>
+        {isLoading ? <CircularProgress/>
+        :
+        <div> 
+          <DialogContentText>
+            Please enter the username and password below
+          </DialogContentText>
+
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email Address"
+            type="email"
+            fullWidth
+          />
+             <TextField
+            margin="dense"
+            id="name"
+            label="Password"
+            type="password"
+            fullWidth
+          /> </div>
+        }
+        </DialogContent>
+
+        <DialogActions>
+          <Button onClick={handleLoginClose} disabled={isLoading} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleLogin} disabled={isLoading} color="primary">
+            Login
+          </Button>
+        </DialogActions>
+        
+      </Dialog>
+      
     </div>
   );
 }
