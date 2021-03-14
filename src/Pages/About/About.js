@@ -55,7 +55,7 @@ const About = props => {
             title: 'Resume',
             description: 'Please Check out my updated Resume',
             linkTitle: 'RESUME',
-            click: () => openLink('https://github.com/ishinbrot/website/raw/master/src/ianShinbrot_resume.pdf')
+            click: () => openLink('https://github.com/ishinbrot/website/raw/master/src/IanShinbrotResume.pdf')
         }
     ]
 
