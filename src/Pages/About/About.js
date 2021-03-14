@@ -9,7 +9,9 @@ import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 
 const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently a Software Developer at Equisoft.
 <br />
-I graduated from Drexel in June 2016 with a bachelors degree in Computer Science. At Drexel, I have completed three different co-ops, 6-month internships.
+I graduated from Drexel in June 2016 with a bachelors degree in Computer Science. I received a certification in Amazon Web Services Cloud Architect as of March 2021.
+I received a certification in Amazon Cloud Practicioner in December 2020.  <br/>
+While I was at Drexel, I have completed three different co-ops, 6-month internships.
 My first co-op was at Independence Blue Cross, while my second and third co-op were both at NextDocs, which was acquired by Aurea during my third co-op.
 Please click one of the below links to learn more information.</p>;
 
