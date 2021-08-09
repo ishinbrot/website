@@ -4,9 +4,19 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Card } from '@material-ui/core';
-import classes from './CardComponent.module.css'
+import classes  from './CardComponent.module.css';
 
-const CardComponent = props => {
+
+interface cardAttributes  {
+    title: string;
+    description: string;
+    linkTitle: string;
+    link: () => void;
+    click: () => void;
+    className: any
+}
+
+const CardComponent = ( props: cardAttributes) : any  => {
     return (
         <Card className={classes.root}>
             <CardContent>
@@ -18,7 +28,7 @@ const CardComponent = props => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" href={props.link} onClick={props.click}>{props.linkTitle}</Button>
+                <Button size="small" ref={props.link} onClick={props.click}>{props.linkTitle}</Button>
             </CardActions>
         </Card>
     );

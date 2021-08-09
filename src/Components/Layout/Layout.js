@@ -15,11 +15,11 @@ const Layout = (props) => {
       <BrowserRouter className="App" basename="/website">
         <Header />
         <Switch>
-          <Route path="/Home" component={Home} exact />
-          <Route path="/About" component={About} exact />
-          <Route path="/Projects" component={Projects} exact />
-          <Route path="/Poetry" component={Poetry} exact /> 
-          <Route path="/Contact" component={Contact} exact />
+          <Route path="/" component={Home} exact />
+          <Route path="/About" component={About}  />
+          <Route path="/Projects" component={Projects}  />
+          <Route path="/Poetry" component={Poetry}  /> 
+          <Route path="/Contact" component={Contact}  />
           <Route component={Home} />
         </Switch>
       </BrowserRouter>

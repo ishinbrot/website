@@ -74,6 +74,13 @@ const Poems = [
     "Were you at camp, hanging out by the lake\n" +
     "You probably got coronavirus and started a trend\n" +
     "That’s when camp started to go on break"    
+    ),
+    new Poem("The New Handshake",
+    "Have you experienced the new handshake\n" +
+    "There are a few who have perfected the elbow bump\n" + 
+    "There are also a few who smile like it’s a piece of cake\n" +
+    "Then there are those who are confused, and in a slump\n" +
+    "After a year of lockdowns and masks, the traditional handshake is starting to quake"
     )
 ];
 
