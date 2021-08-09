@@ -5,7 +5,8 @@ import GridComponent from '../../Components/GridComponent/GridComponent'
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 import Poems from '../Poetry/poem-data';
 
-const summary = <p className={classes.Summary}>Here are some poems I created  during the 2020 coronavirus quarantine. </p>
+const summary = <p className={classes.Summary}>Here are some poems I started during the 2020 lock down, and have continued throughout 2021.
+<br/> I hope you enjoy reading them!</p>
 
 const Poetry = props => {
     // these will be set in a function
