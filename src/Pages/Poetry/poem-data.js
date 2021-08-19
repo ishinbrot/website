@@ -81,7 +81,19 @@ const Poems = [
     "There are also a few who smile like it’s a piece of cake\n" +
     "Then there are those who are confused, and in a slump\n" +
     "After a year of lockdowns and masks, the traditional handshake is starting to quake"
-    )
+    ),
+    new Poem("The Delta Variant",
+    "Have you heard of the new delta strain\n" +
+    "It’s not to be confused with your computer’s delta updates\n" +
+    "The delta variant passes through the air rapidly, just like the bullet train\n" +
+    "The variant has gone throughout the country, it’s in all the states\n" +
+    "We all just need to get the vaccine and put up the vaccine in chains\n" +    
+    "Because after a past year of lockdowns we no longer want to put up the gates"),
+    new Poem("The Boosters are coming",
+    "Do you remember in April, when you first got the vaccine\n"+
+    "Actually it may have been May, because you likely got two shots\n"+
+    "It’s time to go out to your nearest pharmacy, haven’t you seen\n"+
+    "The booster shots are coming soon, who would have thought"),
 ];
 
 export default Poems;
