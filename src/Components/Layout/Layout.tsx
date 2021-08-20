@@ -7,19 +7,19 @@ import Home from '../../Pages/Home/Home';
 import Projects from '../../Pages/Projects/Projects';
 import Poetry from '../../Pages/Poetry/Poetry';
 
-const Layout = (props) => {
+const Layout = () => {
 
 
   return (
     <HashRouter basename='/Home'>
-      <BrowserRouter className="App" basename="/website">
+      <BrowserRouter  basename="/website">
         <Header />
         <Switch>
-          <Route path="/Home" component={Home} exact />
-          <Route path="/About" component={About} exact />
-          <Route path="/Projects" component={Projects} exact />
-          <Route path="/Poetry" component={Poetry} exact /> 
-          <Route path="/Contact" component={Contact} exact />
+          <Route path="/" component={Home} exact />
+          <Route path="/About" component={About}  />
+          <Route path="/Projects" component={Projects}  />
+          <Route path="/Poetry" component={Poetry}  /> 
+          <Route path="/Contact" component={Contact}  />
           <Route component={Home} />
         </Switch>
       </BrowserRouter>

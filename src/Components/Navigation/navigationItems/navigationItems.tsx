@@ -8,7 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
-const navigationItems = (props) => {
+const navigationItems = () => {
     return (
         <List>
             <ListItem button key='Home'>

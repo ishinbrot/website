@@ -14,12 +14,12 @@ const webProjectsSummary = <div className={classes.Summary}>
 const WebProjectList = [
     {
         title: 'Virtual Pest',
-        description: "The Virtual Pest is very similar to a Tamagotchi. The 'pest' has 5 different states that it can show based on the actions the user chooses. This utilized REACT.",
+        description: "The Virtual Pest is very similar to a Tamagotchi. The 'pest' has 5 different states that it can show based on the actions the user chooses. This utilizes REACT.",
         linkTitle: 'Virtual Pest',
         click: () => openLink("https://ishinbrot.github.io/virtual_pest/")
     }, {
         title: 'CollegeSearch',
-        description: "This is my senior project. I worked on the front-end of the application using both HTML and Angular Material 1.0."
+        description: "This is my senior project. I worked on the front-end of the application using both HTML and Angular Material 1.0 based in Angular-JS."
             + "It is a college search application that allows you to search for colleges. It currently doesn't run on github pages."
             + "This links to the github location of the repository.",
         linkTitle: 'CollegeSearch',
@@ -29,7 +29,7 @@ const WebProjectList = [
 
 const reactNavtiveProjectSummary = <div className={classes.Summary}>
     <h2>ReactNative Applications</h2>
-    <p className={classes.Summary}>These are reactNative apps meant to be compatible with the iOS and Android OS. Only the Android APK will be able to be downloaded
+    <p className={classes.Summary}>These are reactNative apps meant to be compatible with the iOS and Android OS. Only the Android APK appears below
 </p></div>;
 const reactNativeProjectList = [
     {

@@ -7,36 +7,30 @@ import GridComponent from '../../Components/GridComponent/GridComponent'
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 
 
-const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently a Software Developer at Equisoft.
+const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently a Senior Consultant at CapTech Ventures.
 <br />
 I graduated from Drexel in June 2016 with a bachelors degree in Computer Science. I received a certification in Amazon Web Services Cloud Architect as of March 2021.
 I received a certification in Amazon Cloud Practicioner in December 2020.  <br/>
-While I was at Drexel, I have completed three different co-ops, 6-month internships.
-My first co-op was at Independence Blue Cross, while my second and third co-op were both at NextDocs, which was acquired by Aurea during my third co-op.
-Please click one of the below links to learn more information.</p>;
+I am curently purusing my Masters of Business Administration at Villanova and expect to graduate in 2024.</p>;
 
 const workExperienceSummary = <div>
+    <h4>CapTech Ventures</h4>
+            I have recently started working at CapTech Ventures as a Senior Consultant. I will update in the near future.
     <h4>Equisoft</h4>
-              I currently work at Equisoft as a Software Developer working as a software consultant on various clients for the OIPA (Oracle Insurance Administration for Life and Annuitites) product.
-              I assist in mentoring new hires, as well as the various client teams in utilizing the OIPA application.
+              I worked at Equisoft as a Software Developer working as a software consultant on various clients for the OIPA (Oracle Insurance Administration for Life and Annuitites) product.
+              I assisted in mentoring new hires, as well as the various client teams in utilizing the OIPA application.
               I have assisted of SSO implementations utilizing both SAML and Microsoft Azure AD, as well as various RESTful and Soap services.
-              I assist in managing the Nexus and ProGet
               The main languages and frameworks I worked on have been Spring, Hibernate, Java.
 
 <h4>Lockheed Martin</h4>
-              I currently work at Lockheed Martin as an Associate Software Engineer working on the LRDR radar system.
+              I worked at Lockheed Martin as an Associate Software Engineer working on the LRDR radar system.
               I work in an Agile Scrum Environment utilizing C++ as the primary language, while performing some tasks
               with bash scripting. My project utilizing GIT, Crucible, and Jenkins for our primary functions
    <h4>NextDocs</h4>
-              I worked  at NextDocs for two of my co-ops, between March-September 2014-2015.
+              I worked at NextDocs  during the summers of March-September 2014-2015.
               NextDocs was acquired by Aurea during my third co-op in June 2015.
               At NextDocs I worked on the NextDocs Suite of Applications consisting of the Regulatory, SOP, and eTMF platforms.
               I was able to quickly learn C#, SQL, and improve my Javascript skills there. as well as my scripting skills.
-
-              <h4>Independence Blue Cross</h4>
-              I worked at Independence Blue Cross for 6 months where I performed manual testing of their mobile IBX application,
-              used Adobe Photoshop to design Drug Labels to be used in the application,
-              as well as initiate the move toward automated testing using a program called SeeTest.
 </div>
 const About = props => {
 
