@@ -1,7 +1,7 @@
 import Poem from '../Poetry/models/poem';
 
 
-const Poems = [
+ const Poems = [
   new Poem("The New Normal",
     "Welcome to the New Normal\n"+
     "Social Distancing and wearing face masks\n"+
@@ -95,5 +95,4 @@ const Poems = [
     "It’s time to go out to your nearest pharmacy, haven’t you seen\n"+
     "The booster shots are coming soon, who would have thought"),
 ];
-
 export default Poems;

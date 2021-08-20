@@ -3,32 +3,31 @@ import classes from './Poetry.module.css'
 import { openLink } from '../../assets/helperFunctions'
 import GridComponent from '../../Components/GridComponent/GridComponent'
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
-import Poems from '../Poetry/poem-data';
+import Poems from './poem-data';
 
 const summary = <p className={classes.Summary}>Here are some poems I started during the 2020 lock down, and have continued throughout 2021.
 <br/> I hope you enjoy reading them!</p>
 
-const Poetry = props => {
+
+const Poetry = () => {
     // these will be set in a function
-    Poems.map(el => {
+    Poems.map(el  => {
         el.click = () => { displayShowPoem(el)}});
     
 
     const displayShowPoem = (el) => {
         
-        setPoemText(el.text);
-      setPoemTitle(el.title);
-      setShowPoem(!showPoem);
+     setPoemText(el.text);
+     setPoemTitle(el.title);
+     setShowPoem(!showPoem);
 
     }
 
     
     const [showPoem, setShowPoem] = useState(false);
-    const [poemText, setPoemText] = useState();
-    const [poemTitle, setPoemTitle] = useState();
+    const [poemText, setPoemText] = useState("");
+    const [poemTitle, setPoemTitle] = useState("");
     
-
-
     return (
         <div>
 

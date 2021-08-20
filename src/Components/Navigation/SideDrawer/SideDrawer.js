@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     },
 });
 
-const SideDrawer = (props) => {
+const SideDrawer = () => {
     const classes = useStyles();
     const [state, setState] = React.useState({
 
