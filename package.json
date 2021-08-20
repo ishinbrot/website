@@ -9,6 +9,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.13",
+    "@types/react": "^17.0.16",
+    "@types/react-dom": "^17.0.9",
     "axios": "^0.21.1",
     "crypto-js": "^4.0.0",
     "firebase": "^8.9.0",
@@ -16,7 +20,8 @@
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "3.4.1",
+    "typescript": "^4.3.5"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -39,13 +44,9 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "^26.0.24",
-    "@types/node": "^16.6.2",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
-    "@types/react-router-dom": "^5.1.8",
+    "@types/material-ui": "^0.21.9",
     "gh-pages": "^2.2.0",
     "redux": "^4.0.5",
-    "typescript": "^4.3.5"
+    "typescript-plugin-css-modules": "^3.4.0"
   }
 }
