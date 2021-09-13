@@ -30,6 +30,15 @@ import Poem from '../Poetry/models/poem';
     "Why is everything still closed, don’t even ask\n"+
     "After all, we are only still in May\n"+
     "Just don’t forget to wear a mask, your one task\n"),
+    new Poem("COVID Hotspot Rotation",
+    "2020 has been a very interesting year\n"+
+    "Places have closed, and we have seen hotspot rotations\n"+
+    "Do you want to go out and get a beer\n"+
+    "Congratulations, your location is now the hotspot of the nation\n"+
+    "Give it a few weeks and you can lose your fear\n"+
+    "As the hotspot moves, and hops on the train station\n"+
+    "There’s only one instance when we will all be in the clear\n"+
+    "And that’s when the vaccine will turn COVID into obliteration"),
     new Poem("Coronavirus Haircut",
     "What has Coronavirus done\n"+
     "All of my hair has grown out\n"+
@@ -48,6 +57,13 @@ import Poem from '../Poetry/models/poem';
     "We can just look at the numbers and go 'yup'\n"+
     "At this point we leave it up to the fates" 
     ),
+    new Poem("Welcome to the Summer Season",
+    "Welcome to the Summer season\n"+
+    "Want an event to go to, they have all been delayed\n"+
+    "No movies, no baseball; there must be a reason\n"+
+    "Forget about a refund, we have already paid\n"+
+    "Insurance policies don’t cover pandemics, it isn’t treason\n"+
+    "This is a wonderful start to the new decade"),
     new Poem("Masks",
     "Why are we recommended to wear a mask\n" +
     "For one simple reason and that’s to stop the spread\n" +
@@ -75,6 +91,41 @@ import Poem from '../Poetry/models/poem';
     "You probably got coronavirus and started a trend\n" +
     "That’s when camp started to go on break"    
     ),
+    new Poem("The start of Vaccines",
+    "In December 2019 something vicious started to run amuck\n"+
+"It slowly spread throughout the world and it made a bit of a scene\n"+
+"We can all agree, the year 2020 just sucks\n"+
+"There may be hope in the future, we just need a vaccine\n"+
+"If the vaccine comes soon, it will just be our luck\n"+
+"The trial results for the vaccine are out, results have been seen\n"+
+"I know it has moved fast, but do we really want to miss this puck\n"+
+"I'll just take the vaccine and be like 'Yea, 2020 was an interesting scene'"
+    ),
+    new Poem("Fall 2020",
+    "In the Fall of 2020 it is time for all students going to college to return\n"+
+    "And in 2020 that means social distancing and coronavirus tests\n"+
+    "The first week may be fine, but then it slowly takes a turn\n"+
+    "One person gets their test results and then it’s like they’re a pest\n"+
+    "But if you think you’ll only get one or two cases you have much to learn\n"+
+    "Suddenly there are an influx of cases, and let’s see what they suggest\n"+
+    "Lets do all online classes, and that’s it; lets adjourn"),
+    new Poem("Outdoor Dining 2020",
+    "Have you tried outdoor dining yet?\n"+
+    "It seems to be the new rage these days\n"+
+    "Watch out for some rain, or you may get a little wet\n"+
+    "Is this outdoor dining just a phase\n"+
+    "Especially with Winter coming, but not to fret\n"+
+    "Outdoor heating lamps seem to be coming, this isn’t just some craze"),
+    new Poem("2020 Reflection",
+   "As the end of the year comes up\n"+
+   "It’s time to remember what happened this year\n"+
+   "January and February were normal parts of the line-up\n"+
+   "Then March came, and what followed took a bit of a veer\n"+
+   "Coronavirus suddenly came, and we all had to lockup\n"+
+   "Then the rioting and looting, this was a bad one; it became all clear\n"+
+   "At least we all learned how to cleanup\n"+
+   "The year is almost over, we will make it to the clear\n"+
+   "I wonder what 2021 will have in it’s lineup"),
     new Poem("The New Handshake",
     "Have you experienced the new handshake\n" +
     "There are a few who have perfected the elbow bump\n" + 
@@ -94,5 +145,32 @@ import Poem from '../Poetry/models/poem';
     "Actually it may have been May, because you likely got two shots\n"+
     "It’s time to go out to your nearest pharmacy, haven’t you seen\n"+
     "The booster shots are coming soon, who would have thought"),
+    new Poem("Broad Street 2021",
+    "Are you ready for the broad street run\n"+
+    "Get ready for news, because there are some changes in the air\n"+
+    "Firstly, there are no spectators at the beginning or end; will that ruin the fun\n"+
+    "Second, vaccines are required; but that is expected and fair\n"+
+    "At least it haircut places are still open, I don’t want my hair to be in a bun\n"+
+    "Don’t forget the race is on October 10th, I will see you there")
+,new Poem("Trapped",
+"What has IDA done?/n"+
+"I am in my building, trapped/n"+
+"I can’t even walk around the city, it’s no fun\n"+
+"It’s like a new type of handicap\n"+
+"Look at all this water, let it evaporate with the sun"),
+new Poem("The Schuylkill trail of Hurricane IDA",
+"Do you ever go on the Schuylkill trail\n"+
+"You may go on it for a walk, or a quick run\n"+
+"Yesterday IDA came and changed the tale\n"+
+"The trail has been flooded, it is not fun\n"+
+"The trail is filled with water, it is definitely not pale\n"+
+"IDA has left Philadelphia, it is now time for the sun"),
+new Poem("Why do I run?",
+"Why do I run?\n"+
+"Is it my way of working through stress\n"+
+"Or do I run outside just for some fun\n"+
+"It started out with the stress, I must confess\n"+
+"And now I enjoy, but I am always happy when I am done\n"
+)
 ];
 export default Poems;
