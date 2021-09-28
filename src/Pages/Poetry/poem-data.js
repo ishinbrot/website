@@ -179,6 +179,15 @@ new Poem("Jewish September",
 "Next is another big meal, which is Yom Kippur\n"+
 "You start off with a big feast, then everything slows to a crawl\n"+
 "Wait one whole day, then you feast and look chipper\n"+
-"You may skip your coffee, do whatever you want; it’s your call")
+"You may skip your coffee, do whatever you want; it’s your call"),
+new Poem("The 'Not Broad Street Run'",
+"Have you heard of the Broad Street 10 mile race\n"+
+"It’s not on broad street as long as you follow new scenic route\n"+
+"Don't stay on broad street or you’ll be in last place\n"+
+"At 16th street you will be given the boot\n"+
+"To JFK we run, just stay at the same pace\n"+
+"Back to Market we go, but no time to get a flute\n"+
+"The end at Pattison Avenue will have a confused look on your face\n"+
+"It’s now the Philly 10 miler scoot")
 ];
 export default Poems;
