@@ -5,7 +5,8 @@ import GridComponent from '../../Components/GridComponent/GridComponent'
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 import Poems from './poem-data';
 
-const summary = <p className={classes.Summary}>Here are some poems I started during the 2020 lock down, and have continued throughout 2021.
+const summary = <p className={classes.Summary}>Here are some poems I started during the 2020 coronavirus quarantine, and have continued throughout 2021.
+<br/> I have recently expanded into poetry un-related to the coronavirus pandemic.
 <br/> I hope you enjoy reading them!</p>
 
 

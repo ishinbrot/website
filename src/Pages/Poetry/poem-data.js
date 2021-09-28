@@ -153,8 +153,8 @@ import Poem from '../Poetry/models/poem';
     "At least it haircut places are still open, I don’t want my hair to be in a bun\n"+
     "Don’t forget the race is on October 10th, I will see you there")
 ,new Poem("Trapped",
-"What has IDA done?/n"+
-"I am in my building, trapped/n"+
+"What has IDA done?\n"+
+"I am in my building, trapped\n"+
 "I can’t even walk around the city, it’s no fun\n"+
 "It’s like a new type of handicap\n"+
 "Look at all this water, let it evaporate with the sun"),
@@ -171,6 +171,14 @@ new Poem("Why do I run?",
 "Or do I run outside just for some fun\n"+
 "It started out with the stress, I must confess\n"+
 "And now I enjoy, but I am always happy when I am done\n"
-)
+),
+new Poem("Jewish September",
+"Welcome to September, the first month of fall\n"+
+"Are you ready for the Jewish holidays, better get your slippers\n"+
+"First was Rosh Hashanah, it was an apples and honey brawl\n"+
+"Next is another big meal, which is Yom Kippur\n"+
+"You start off with a big feast, then everything slows to a crawl\n"+
+"Wait one whole day, then you feast and look chipper\n"+
+"You may skip your coffee, do whatever you want; it’s your call")
 ];
 export default Poems;
