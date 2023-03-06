@@ -7,11 +7,12 @@ import GridComponent from '../../Components/GridComponent/GridComponent'
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 
 
-const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently a Senior Consultant at CapTech Ventures.
+const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot and located in the Philadelphia region. I am currently a Senior Consultant at CapTech Ventures.
 <br />
-I am a passionate consultant with 7 years of experience focused on digital transformations and integrations in the insurance and financial services industry. 
+I am a passionate consultant with 7 years of experience focused on digital transformations and integrations in the Insurance and Financial Services industry. 
 I bring strong relationship building skills to influence and motivate teams. Effectively communicated and presented complex messages to clients at the executive level.
-I am curently purusing my Masters of Business Administration with a focus in Strategic Management at Villanova and expect to graduate in May 2023.</p>;
+I am curently purusing my Masters of Business Administration with a focus in Strategic Management at Villanova and expect to graduate in May 2023. <br/>
+Aside from working I am a big runner and tend to run along the art musuem trail</p>
 
 const workExperienceSummary = <div>
     <h4>CapTech Ventures</h4>
