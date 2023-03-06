@@ -5,14 +5,15 @@ import { openLink } from '../../assets/helperFunctions'
 
 const summary = <p className={classes.Summary}>
 My email address is ianshinbro@gmail.com
-Stay tuned for updates to this page</p>;
+Feel free to click the button below to email me.</p>;
 
 const ContactCard = [
     {
         title: 'Contact Information',
         description: "Please click the link below to send me an email.",
         linkTitle: 'Email',
-        link: () => openLink("mailto:ianshinbro@gmail.com?Subject=Website Feedback")
+        click: () => openLink("mailto:ianshinbro@gmail.com?Subject=Website Feedback")
+        
     }
 ]
 

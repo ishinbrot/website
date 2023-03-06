@@ -7,7 +7,7 @@ import Divider from '@material-ui/core/Divider';
 
 let projectList;
 const webProjectsSummary = <div className={classes.Summary}>
-    <h2>Web Projects</h2><p>Please check out some of my projects below</p>
+    <h2>Web Projects</h2><p>Please check out some of my programming projects below</p>
 </div>;
 
 
@@ -50,7 +50,7 @@ const Projects = props => {
     return (
         <div>
             <div className={classes.Header}>
-                <p>This page is under active development. Please click the following button to be directed to my github page</p>
+                <p>This page show-cases the many programming projects I have done throughout my undergraduate and early career.</p>
                 <Button className={classes.Header} variant="outlined" onClick={() => { return window.location.href = "https://github.com/ishinbrot" }}>LINK TO GITHUB</Button>
             </div>
             {webProjectsSummary}
