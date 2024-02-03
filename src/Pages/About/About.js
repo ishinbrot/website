@@ -30,13 +30,10 @@ const workExperienceSummary = <div>
             I led the initiative to orchestrate engaging technical discussions with various SMEs to foster innovation and cultivate meaningful relationships for future implementation initiatives. <br/>
             I optimized the onboarding process for multiple Account Management Teams by designing and implementing Sharepoint pages to enhance knowledge accessbility and collobration across all account projects.
     <h4>Equisoft</h4>
-              I prevously worked at Equisoft as a software consultant on various clients in the implementation of the OIPA (Oracle Insurance Administration for Life and Annuitites) product. <br/>
-              Throughout the implementation many different service were used, such as SAML, SSIS, Microsoft Azure, XSLT, and Java.
-              I led multiple teams (in a Global Capacity) in the modernization of the data driven OIPA application in a SaaS and onPrem environment with a continous 100% success rate. <br/>
-              I was continously extended and worked on multiple projects at one time, in addition to my studies at Villanova.
-              I assisted in mentoring new hires, as well as the various client teams in utilizing the OIPA application. <br/>
-              I contributed to the companies growth in the successful execution of RFP’s and POC’s for new integrations and architecture utilizing Oracle Insurance Policy Administration (OIPA) and other enterprise systems
-              I Designed and implemented new migration strategy for multiple projects which sped up environment configurations by 30%
+    I worked at Equisoft as a consultant specializing in the Life Insurance Industry. I have worked with many clients in modernizing their infrastructure using technologies such as SAML, SSIS, Microsoft Azure, and XSLT to improve clients performance by a minimum of 10%.
+I have led global teams with implementations and business processes in modernizing companies infrastructure and integrate digital with the data driven OIPA Application in a Saas environment. I worked with SSIS and Azure Data Factory to generate 100s of reports and view data and allow for quicker information gathering related to gathering many different types of claims
+I assisted in mentoring new hires, as well as the various client teams in utilizing the OIPA application. I have assisted of SSO implementations utilizing both SAML and Microsoft Azure AD, as well as various RESTful and Soap services.
+I designed and implemented a new migration strategy for multiple projects using Equisoft Design to improve environment configurations by 30%. The main languages and frameworks I worked on have been Azure, Spring, Hibernate, and Java.
 <h4>Lockheed Martin</h4>
               I worked at Lockheed Martin as an Associate Software Engineer working on the LRDR radar system. <br/>
               I work in an Agile Scrum Environment utilizing C++ as the primary language, while performing some tasks <br/>
