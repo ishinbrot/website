@@ -9,10 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
-import HomeIcon from '@material-ui/icons/Home';
-import WorkIcon from '@material-ui/icons/Work';
-import InfoIcon from '@material-ui/icons/Info';
-import EmailIcon from '@material-ui/icons/Email';
+
 import IconButton from '@material-ui/core/IconButton';
 import navigationItems from '../navigationItems/navigationItems';
 
@@ -24,16 +21,9 @@ const useStyles = makeStyles({
         width: 'auto',
     },
 });
-const pages = [
-    {title: 'Home', icon: <HomeIcon/>},
-    {title:'About',icon: <HomeIcon/>}, 
-{title: 'Projects',icon: <WorkIcon/>}, 
-{title: 'Blog', icon: <WorkIcon/>},
-{title:'Poetry',icon:<WorkIcon />}, 
-{ title:'Contact', icon: <EmailIcon />}, 
-];
 
-const SideDrawer = () => {
+
+const SideDrawer = (pages) => {
     const classes = useStyles();
     const [state, setState] = React.useState({
 
@@ -46,7 +36,7 @@ const SideDrawer = () => {
     };
 
 
-    const list = () => (
+    const list = (anchor, pages) => (
 
         <div
             role="presentation"
@@ -55,7 +45,7 @@ const SideDrawer = () => {
         >
             <List>
                 
-                {pages.map((item, index) => {
+                {pages.pages.map((item, index) => {
                     return (
                     <ListItem button key={item.title}  component={Link} to={item.title}>
                         <ListItemIcon>{item.icon}</ListItemIcon>
@@ -74,7 +64,7 @@ const SideDrawer = () => {
                 <MenuIcon />
             </IconButton>
             <Drawer anchor={'left'} open={state.open} onClose={toggleDrawer(false)}>
-                {list('left')}
+                {list('left', pages)}
             </Drawer>
         </div>
     );

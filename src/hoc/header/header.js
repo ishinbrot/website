@@ -15,6 +15,10 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import HomeIcon from '@material-ui/icons/Home';
+import WorkIcon from '@material-ui/icons/Work';
+import InfoIcon from '@material-ui/icons/Info';
+import EmailIcon from '@material-ui/icons/Email';
 
 // update for react hooks 
 const useStyles = makeStyles(theme => ({
@@ -29,8 +33,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const pages = ['About', 'Home', 'Poetry', 'Contact', 'Blog'];
-
+const pages = [
+  {title: 'Home', icon: <HomeIcon/>},
+  {title:'About',icon: <HomeIcon/>}, 
+{title: 'Projects',icon: <WorkIcon/>}, 
+{title: 'Blog', icon: <WorkIcon/>},
+{title:'Poetry',icon:<WorkIcon />}, 
+{ title:'Contact', icon: <EmailIcon />}, 
+];
 export default function Header(props) {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -73,7 +83,7 @@ export default function Header(props) {
       <AppBar position="fixed">
         <Toolbar>
 
-          <SideDrawer click={props.click}/>
+          <SideDrawer click={props.click} pages={pages}/>
          
           <Typography variant="h6" className={classes.title}>
            {pageName}
