@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import classes from './Poetry.module.css'
 import { openLink } from '../../assets/helperFunctions'
 import GridComponent from '../../Components/GridComponent/GridComponent'

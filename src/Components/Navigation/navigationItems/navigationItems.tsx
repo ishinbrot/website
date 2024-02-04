@@ -27,6 +27,10 @@ const navigationItems = () => {
                 <ListItemIcon><WorkIcon /></ListItemIcon>
                 <ListItemText primary='Poetry' />
             </ListItem>
+            <ListItem button key='Blog'>
+                <ListItemIcon><WorkIcon /></ListItemIcon>
+                <ListItemText primary='Blog' />
+            </ListItem>
             <ListItem button key='Contact'>
                 <ListItemIcon><EmailIcon /></ListItemIcon>
                 <ListItemText primary='Contact' />

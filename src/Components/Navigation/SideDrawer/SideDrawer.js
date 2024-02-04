@@ -24,6 +24,14 @@ const useStyles = makeStyles({
         width: 'auto',
     },
 });
+const pages = [
+    {title: 'Home', icon: <HomeIcon/>},
+    {title:'About',icon: <HomeIcon/>}, 
+{title: 'Projects',icon: <WorkIcon/>}, 
+{title: 'Blog', icon: <WorkIcon/>},
+{title:'Poetry',icon:<WorkIcon />}, 
+{ title:'Contact', icon: <EmailIcon />}, 
+];
 
 const SideDrawer = () => {
     const classes = useStyles();
@@ -46,33 +54,17 @@ const SideDrawer = () => {
             onKeyDown={toggleDrawer(false)}
         >
             <List>
-                    <ListItem button key='Home'  component={Link} to="Home">
-                        <ListItemIcon><HomeIcon /></ListItemIcon>
-                        <ListItemText primary='Home'
+                
+                {pages.map((item, index) => {
+                    return (
+                    <ListItem button key={item.title}  component={Link} to={item.title}>
+                        <ListItemIcon>{item.icon}</ListItemIcon>
+                        <ListItemText primary={item.title}
                              />
-                    </ListItem>
-                
-                    <ListItem button key='About' component={Link} to="About">
-                        <ListItemIcon><InfoIcon /></ListItemIcon>
-                        <ListItemText primary='About'
-                        />
-                    </ListItem>
-                
-                    <ListItem button key='Projects'  component={Link} to="Projects">
-                        <ListItemIcon><WorkIcon /></ListItemIcon>
-                        <ListItemText primary='Projects'
-                        />
-                    </ListItem>
-                    <ListItem button key='Poetry'  component={Link} to="Poetry">
-                        <ListItemIcon><WorkIcon /></ListItemIcon>
-                        <ListItemText primary='Poetry'
-                        />
-                    </ListItem>
-                    <ListItem button key='Contact'  component={Link} to="Contact">
-                        <ListItemIcon><EmailIcon /></ListItemIcon>
-                        <ListItemText primary='Contact'
-                        />
-                    </ListItem>
+                                    </ListItem>
+                    )
+                })}
+            
             </List>
         </div >
     );

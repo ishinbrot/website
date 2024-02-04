@@ -6,6 +6,7 @@ import Contact from '../../Pages/Contact/Contact';
 import Home from '../../Pages/Home/Home';
 import Projects from '../../Pages/Projects/Projects';
 import Poetry from '../../Pages/Poetry/Poetry';
+import Blog from '../../Pages/Blog/Blog';
 
 const Layout = () => {
 
@@ -20,6 +21,7 @@ const Layout = () => {
           <Route path="/About" element={<About/>}  />
           <Route path="/Projects" element={<Projects/>}  />
           <Route path="/Poetry" element={<Poetry/>}  /> 
+          <Route path="/Blog" element={<Blog/>} />
           <Route path="/Contact" element={<Contact/>}  />
           <Route element={<Home/>} />
         </Routes>

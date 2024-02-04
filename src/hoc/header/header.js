@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core//Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer'
@@ -28,6 +28,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
 }));
+
+const pages = ['About', 'Home', 'Poetry', 'Contact', 'Blog'];
 
 export default function Header(props) {
   const classes = useStyles();
@@ -70,6 +72,7 @@ export default function Header(props) {
       
       <AppBar position="fixed">
         <Toolbar>
+
           <SideDrawer click={props.click}/>
          
           <Typography variant="h6" className={classes.title}>
@@ -80,7 +83,7 @@ export default function Header(props) {
         
       </AppBar>
       <Dialog open={loginDialogOpen} onClose={handleLoginClose} aria-labelledby="form-dialog-title">
-    /*  <DialogTitle id="form-dialog-title">Login</DialogTitle>
+      <DialogTitle id="form-dialog-title">Login</DialogTitle>
         
         <DialogContent>
         {isLoading ? <CircularProgress/>
