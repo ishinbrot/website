@@ -1,24 +1,42 @@
 import React from 'react';
-import classes from './Home.module.css';
-
-const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently a Senior Consultant at CapTech Ventures.
-<br/>
-Welcome to my site. This site is continuously getting updated and has recently been updated using React and Material-UI in Typescript (Last Updated March 2026).
-I utilized cursor to assist in the migration from Javascript to Typescript.
-Many of my blogs from Medium are also viewable on my website, in a short snippet form; with a link to the full blog post.
-Feel free to click any of the links in the navigation bar.
-<br/> If you have any feedback feel free to let me know so I can improve the site.
-</p>;
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
 
 const Home: React.FC = () => {
   return (
-      <div>
-          {summary}
-      </div >
+    <Box>
+      <Typography
+        variant="h3"
+        component="h1"
+        sx={{
+          fontWeight: 600,
+          letterSpacing: '-0.03em',
+          mb: 1,
+          color: 'text.primary',
+        }}
+      >
+        Ian Shinbrot
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        color="text.secondary"
+        sx={{ mb: 3, maxWidth: 520 }}
+      >
+        Consultant · Philadelphia · projects, writing & running
+      </Typography>
+      <Divider sx={{ mb: 3 }} />
+      <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
+        Hello — welcome to my portfolio site. I am currently a Senior Consultant at CapTech Ventures.
+        This site highlights projects, blog snippets, poetry, and the Philly Schvitzers running club.
+      </Typography>
+      <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
+        The site is built with React, TypeScript, and Material UI (last updated March 2026). Many posts
+        link out to full articles on Medium. Use the menu to explore, and reach out via Contact if you
+        have feedback.
+      </Typography>
+    </Box>
   );
-}
+};
+
 export default Home;
-
-
-
-

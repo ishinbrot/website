@@ -23,6 +23,21 @@ import EmailIcon from '@mui/icons-material/Email';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 
 // update for react hooks 
+const PAGE_LABELS = {
+  Home: 'Home',
+  About: 'About',
+  Projects: 'Projects',
+  Blog: 'Blog',
+  Poetry: 'Poetry',
+  PhillySchvitzers: 'Philly Schvitzers',
+  Contact: 'Contact',
+};
+
+function currentPageLabel(pathname) {
+  const raw = pathname.replace(/^\//, '').split('/')[0] || 'Home';
+  return PAGE_LABELS[raw] || raw || 'Home';
+}
+
 const useStyles = makeStyles(
   (theme) => ({
     root: {
@@ -31,8 +46,25 @@ const useStyles = makeStyles(
     menuButton: {
       marginRight: theme.spacing(2),
     },
-    title: {
+    appBar: {
+      backgroundColor: '#ffffff',
+      color: theme.palette.text.primary,
+      boxShadow: '0 1px 0 0 rgba(15, 23, 42, 0.08)',
+    },
+    toolbar: {
+      minHeight: 64,
+    },
+    brand: {
+      fontWeight: 700,
+      letterSpacing: '-0.02em',
+      color: theme.palette.primary.main,
+    },
+    pageLabel: {
       flexGrow: 1,
+      textAlign: 'right',
+      fontWeight: 500,
+      color: theme.palette.text.secondary,
+      fontSize: '0.95rem',
     },
   }),
   { defaultTheme: appTheme }
@@ -64,9 +96,7 @@ export default function Header(props) {
     console.log('Drawer was open.');
   };
 
-  const pageName = (location.pathname.length===1) ? "Home - Ian Shinbrot" : (location.pathname.substring(1,location.pathname.length)) + " - Ian Shinbrot";
-  //const pageName = (location.pathname).includes('/')  ? 'Home   -   Ian Shinbrot'
-  //: location.pathname.replace("/",'') +"  -   Ian Shinbrot";
+  const pageLabel = currentPageLabel(location.pathname);
 
   const [loginDialogOpen, setLoginDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -86,13 +116,16 @@ export default function Header(props) {
     
     <div className={classes.root}>
       
-      <AppBar position="fixed">
-        <Toolbar>
+      <AppBar position="fixed" className={classes.appBar} elevation={0}>
+        <Toolbar className={classes.toolbar} disableGutters sx={{ px: { xs: 2, sm: 3 } }}>
 
           <SideDrawer click={props.click} pages={pages}/>
          
-          <Typography variant="h6" className={classes.title}>
-           {pageName}
+          <Typography variant="h6" component="div" className={classes.brand} sx={{ flexGrow: 0 }}>
+            Ian Shinbrot
+          </Typography>
+          <Typography variant="body2" component="span" className={classes.pageLabel}>
+            {pageLabel}
           </Typography>
   {true ?   <div></div>:   <Button color="inherit" onClick={setLoginDialogOpen}>Login</Button> }
         </Toolbar>

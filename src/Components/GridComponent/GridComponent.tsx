@@ -20,7 +20,7 @@ interface gridElements  {
 const GridComponent = (props: gridElements) :any => {
     return (
         <div>
-            <Grid container spacing={3} className={classes.container}>
+            <Grid container spacing={4} className={classes.container}>
                 {props.cards.map((el :  gridMember) : any=> (
                     <Grid item xs={12} sm={6} md={4}>
                         <CardComponent className={classes.cardComponent}

@@ -18,7 +18,7 @@ interface cardAttributes  {
 
 const CardComponent = ( props: cardAttributes) : any  => {
     return (
-        <Card className={classes.root}>
+        <Card className={classes.root} variant="outlined" elevation={0}>
             <CardContent>
                 <Typography variant="h5" component="h2">
                     {props.title}
