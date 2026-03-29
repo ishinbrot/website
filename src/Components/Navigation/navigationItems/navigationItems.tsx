@@ -1,8 +1,8 @@
 import React from 'react';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import { Link } from 'react-router-dom';
 
 interface page  {
@@ -16,11 +16,11 @@ const navigationItems = (props: pages) => {
         <List>
                  {props.map((item, index) => {
                     return (
-                    <ListItem button key={item.title}  component={Link} to={item.title}>
+                    <ListItemButton key={item.title} component={Link} to={item.title}>
                         <ListItemIcon>{item.icon}</ListItemIcon>
                         <ListItemText primary={item.title}
                              />
-                                    </ListItem>
+                                    </ListItemButton>
                     )
                 })}
         </List>

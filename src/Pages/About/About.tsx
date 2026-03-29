@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-
-
-import { openLink } from '../../assets/helperFunctions'
-import classes from './About.module.css'
-import GridComponent from '../../Components/GridComponent/GridComponent'
+import { openLink } from '../../assets/helperFunctions';
+import classes from './About.module.css';
+import GridComponent from '../../Components/GridComponent/GridComponent';
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
-
 
 const summary = <p className={classes.Summary}>Hello, My name is Ian Shinbrot. I am currently a Consultant at CapTech Consulting focusing in the Financial Services sector.
 <br />
@@ -18,10 +15,16 @@ Throughout my career I have dabbled in many technologies ranging from Java, Spri
 I am always on the lookout for new technologies and tools by reading blogs such as CNET, Engadget, Udemy, Medium, etc.
 </p>
 
-
 const workExperienceSummary = <div>
+    <h4>Whitespace/World Services</h4>
+    I currently work at Whitespace/World Services as a Senior Software Engineer/Product Incident Lead.
+    We work in an Agile Scrum Environment (Kanban) and use JIRA for project management.
+    The project utilizes Microservices architecture and is built with Spring Boot, React, and AWS. This project is in the government public sector.
+    I previously build a POC utilizng React, Spring Boot, and AWS to develop a web application.
+    I additionally scraped data from a website and used it to populate a database using Java and Spring Boot.
+
     <h4>CapTech Consulting</h4>
-            I currently work at CapTech Consulting and focus on the Financial Services Sector as a Developor and Analyst. <br/>
+            I previously worked at CapTech Consulting and focus on the Financial Services Sector as a Developor and Analyst. <br/>
             I led a multi-year project in modernizing Authentication-based API's from SOAP to REST in all areas, including development, requirement gathering, and working on quarterly roadmaps to ensure a successful delivery.
           <br/>
           The tools used in this project were JIRA, Confluence, JAVA, Swagger, and Spring Boot
@@ -39,17 +42,24 @@ I designed and implemented a new migration strategy for multiple projects using 
               I work in an Agile Scrum Environment utilizing C++ as the primary language, while performing some tasks <br/>
               with bash scripting. My project utilizing GIT, Crucible, and Jenkins for our primary functions
 </div>
-const About = props => {
 
+type CardItem = {
+  title: string;
+  description: string;
+  linkTitle: string;
+  click: () => void;
+}
+
+const About: React.FC = () => {
     const displayModal = () => {
         setShowModal(!showModal);
     }
 
     const [showModal, setShowModal] = useState(false)
-    const AboutList = [
+    const AboutList: CardItem[] = [
         {
             title: 'Work Experience',
-            description: ' \I have worked at many companies throughout the years. Click to see more information.',
+            description: ' I worked at many companies throughout the years. Click to see more information.',
             linkTitle: 'More Information',
             click: () => { displayModal() }
         },{
@@ -60,8 +70,6 @@ const About = props => {
         }
     ]
 
-
-
     return (
         <div>
             {summary}
@@ -71,3 +79,7 @@ const About = props => {
     );
 }
 export default About;
+
+
+
+

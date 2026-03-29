@@ -1,31 +1,28 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import Typography from '@material-ui/core/Typography';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import MuiDialogContent from '@material-ui/core/DialogContent';
-import MuiDialogActions from '@material-ui/core/DialogActions';
-import { withStyles } from '@material-ui/core/styles';
-import CloseIcon from '@material-ui/icons/Close';
-import IconButton from '@material-ui/core/IconButton';
+import { makeStyles, withStyles } from '@mui/styles';
+import Dialog from '@mui/material/Dialog';
+import Typography from '@mui/material/Typography';
+import MuiDialogTitle from '@mui/material/DialogTitle';
+import MuiDialogContent from '@mui/material/DialogContent';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import type { Theme } from '@mui/material/styles';
+import { appTheme } from '../../../theme';
 
-
-const styles = (theme) => ({
+const styles = (theme: Theme) => ({
   root: {
       margin: 0,
       padding: theme.spacing(2),
   },
   closeButton: {
-      position: 'absolute',
+      position: 'absolute' as const,
       right: theme.spacing(1),
       top: theme.spacing(1),
       color: theme.palette.grey[500],
   },
 });
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   paper: {
     position: 'absolute',
     width: 400,
@@ -36,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DialogTitle = withStyles(styles)((props) => {
+const DialogTitle = withStyles(styles)((props: any) => {
   const { children, classes, onClose, ...other } = props;
   return (
       <MuiDialogTitle disableTypography className={classes.root} {...other}>
@@ -50,15 +47,24 @@ const DialogTitle = withStyles(styles)((props) => {
   );
 });
 
-const DialogContent = withStyles((theme) => ({
-  root: {
-      padding: theme.spacing(2),
-  },
-}))(MuiDialogContent);
-const CustomDialog = props => {
-  const classes = useStyles();
-  // getModalStyle is not a pure function, we roll the style only on the first render
+const DialogContent = withStyles(
+  (theme: Theme) => ({
+    root: {
+        padding: theme.spacing(2),
+    },
+  }),
+  { defaultTheme: appTheme }
+)(MuiDialogContent);
 
+type CustomDialogProps = {
+  click: () => void;
+  display: boolean;
+  title: React.ReactNode;
+  text: React.ReactNode;
+};
+
+const CustomDialog: React.FC<CustomDialogProps> = (props) => {
+  useStyles();
   return (
     <div>
       <Dialog onClose={props.click} aria-labelledby="customized-dialog-title" open={props.display}>
@@ -76,3 +82,5 @@ const CustomDialog = props => {
   );
 }
 export default CustomDialog;
+
+

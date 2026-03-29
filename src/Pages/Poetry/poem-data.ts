@@ -1,7 +1,7 @@
 import Poem from '../Poetry/models/poem';
 
 
- const Poems = [
+const PoemsUnsorted = [
   new Poem("The New Normal", "2020",
     "Welcome to the New Normal\n"+
     "Social Distancing and wearing face masks\n"+
@@ -552,6 +552,51 @@ new Poem("Jetlag", "2023",
 "The clock ticks on, a rhythmic beat,\n"+
 "Yet body and time refuse to meet.\n"+
 "Through day and night, a dance untold,\n"+
-"In jetlag's grip, my tale unfolds.")
+"In jetlag's grip, my tale unfolds."),
+new Poem("Are you ready for the 2026 Broad Street Run", "2026",
+"Are you ready for the 2026 Broad Street Run\n"+
+"It continues to remain solely on Broad Street\n"+
+"10 miles down broad street sure does sound like fun\n"+
+"After the race feel free to have a treat\n"+
+"And you may even get to enjoy the sun\n"+
+"Or the rain if the sun takes a backseat"),
+new Poem("Have you been to Amazon Fresh", "2026",
+"Have you been to Amazon Fresh\n"+
+"not Whole Foods, though Amazon owns them both,\n"+
+"competing with itself: prices low, then rising,\n"+
+"unsustainable by design.\n"+
+"In Philly it lasted six months.\n"+
+"Northern Liberties waits, another clean empty box"),
+new Poem("Winter Storm 2025", "2025",
+"Winter Storm Fern crashed Philly like a broken build,\n"+
+"While American Airlines left me stranded in the Florida heat.\n"+
+"I spent my \"vacation\" humid, annoyed, and unskilled\n"+
+"Enjoying the sun while I should be on a frozen street.\n"+
+"Eighty degrees and sunshine—honestly, what could be worse\n"+
+"Than palm trees when you're ready for a Philadelphia winter?\n"+
+"But the delays have cleared, I've finished my course\n"+
+"And I'm headed back home to a city turned into a splinter."),
+new Poem("Philly Schvitzers", "2024",
+"Philly Schvitzers enters the chat\n"+
+"Quarter 2 kicked off and work got wild,\n"+
+"Philly boiled while work had an interesting twist.\n"+
+"I ran to sweat, couldn't call it quits—\n"+
+"Join the Philly Schvitzers and embrace the Schvitz.")
 ];
+
+/** Oldest year first; non-numeric years sort last. */
+function comparePoemsByYear(a: Poem, b: Poem): number {
+  const parseYear = (y: string): number | null => {
+    const n = parseInt(y, 10);
+    return Number.isNaN(n) ? null : n;
+  };
+  const ya = parseYear(a.year);
+  const yb = parseYear(b.year);
+  if (ya === null && yb === null) return 0;
+  if (ya === null) return 1;
+  if (yb === null) return -1;
+  return ya - yb;
+}
+
+const Poems = [...PoemsUnsorted].sort(comparePoemsByYear);
 export default Poems;
