@@ -29,13 +29,15 @@ const PAGE_LABELS = {
   Projects: 'Projects',
   Blog: 'Blog',
   Poetry: 'Poetry',
-  PhillySchvitzers: 'Philly Schvitzers',
+  PhillySchvitzers: 'The Philly Schvitzers',
   Contact: 'Contact',
 };
 
 function currentPageLabel(pathname) {
   const raw = pathname.replace(/^\//, '').split('/')[0] || 'Home';
-  return PAGE_LABELS[raw] || raw || 'Home';
+  const lookup = raw.toLowerCase();
+  const entry = Object.keys(PAGE_LABELS).find(key => key.toLowerCase() === lookup);
+  return entry ? PAGE_LABELS[entry] : raw;
 }
 
 const useStyles = makeStyles(
@@ -57,13 +59,13 @@ const useStyles = makeStyles(
     brand: {
       fontWeight: 700,
       letterSpacing: '-0.02em',
-      color: theme.palette.primary.main,
+      color: '#ffffff',           // Making your name white as well
     },
     pageLabel: {
       flexGrow: 1,
       textAlign: 'right',
       fontWeight: 500,
-      color: theme.palette.text.secondary,
+      color: '#ffffff',           // Force this specific text to be white
       fontSize: '0.95rem',
     },
   }),
