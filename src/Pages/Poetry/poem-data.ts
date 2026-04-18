@@ -576,7 +576,7 @@ new Poem("Winter Storm 2025", "2025",
 "Than palm trees when you're ready for a Philadelphia winter?\n"+
 "But the delays have cleared, I've finished my course\n"+
 "And I'm headed back home to a city turned into a splinter."),
-new Poem("Philly Schvitzers", "2024",
+new Poem("Philly Schvitzers", "2025",
 "Philly Schvitzers enters the chat\n"+
 "Quarter 2 kicked off and work got wild,\n"+
 "Philly boiled while work had an interesting twist.\n"+

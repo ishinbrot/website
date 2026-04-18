@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@mui/material/Button';
+import { Box, Typography, Button } from '@mui/material';
 import { openLink } from '../../assets/helperFunctions';
 import classes from './Projects.module.css';
 import GridComponent from '../../Components/GridComponent/GridComponent';
@@ -12,9 +12,10 @@ type CardItem = {
   click: () => void;
 }
 
-const webProjectsSummary = <div className={classes.Summary}>
-    <h2>Web Projects</h2><p>Please check out some of my programming projects below</p>
-</div>;
+const webProjectsSummary = <Box sx={{ mb: 4 }}>
+    <Typography variant="h4" component="h2" sx={{ mb: 1, fontWeight: 600 }}>Web Projects</Typography>
+    <Typography variant="body1">Please check out some of my programming projects below</Typography>
+</Box>;
 
 const WebProjectList: CardItem[] = [
     {
@@ -32,10 +33,10 @@ const WebProjectList: CardItem[] = [
     }
 ]
 
-const reactNavtiveProjectSummary = <div className={classes.Summary}>
-    <h2>ReactNative Applications</h2>
-    <p className={classes.Summary}>These are reactNative apps meant to be compatible with the iOS and Android OS. Only the Android APK appears below
-</p></div>;
+const reactNavtiveProjectSummary = <Box sx={{ mb: 4 }}>
+    <Typography variant="h4" component="h2" sx={{ mb: 1, fontWeight: 600 }}>ReactNative Applications</Typography>
+    <Typography variant="body1">These are reactNative apps meant to be compatible with the iOS and Android OS. Only the Android APK appears below</Typography>
+</Box>;
 const reactNativeProjectList: CardItem[] = [
     {
         title: 'SHOP',
@@ -53,17 +54,17 @@ const reactNativeProjectList: CardItem[] = [
 
 const Projects: React.FC = () => {
   return (
-      <div>
-          <div className={classes.Header}>
-              <p>This page show-cases the many programming projects I have done throughout my undergraduate and early career.</p>
-              <Button className={classes.Header} variant="outlined" onClick={() => { return window.location.href = "https://github.com/ishinbrot" }}>LINK TO GITHUB</Button>
-          </div>
+      <Box>
+          <Box sx={{ mb: 4 }}>
+              <Typography variant="body1" paragraph>This page show-cases the many programming projects I have done throughout my undergraduate and early career.</Typography>
+              <Button variant="outlined" onClick={() => { return window.location.href = "https://github.com/ishinbrot" }}>LINK TO GITHUB</Button>
+          </Box>
           {webProjectsSummary}
           <GridComponent cards={WebProjectList} />
           {reactNavtiveProjectSummary}
           <GridComponent cards={reactNativeProjectList} />
           <Divider />
-      </div >
+      </Box >
   );
 }
 export default Projects;

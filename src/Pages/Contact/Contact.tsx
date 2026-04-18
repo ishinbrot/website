@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box, Typography } from '@mui/material';
 import classes from './Contact.module.css';
 import GridComponent from '../../Components/GridComponent/GridComponent';
 import { openLink } from '../../assets/helperFunctions';
@@ -10,9 +11,10 @@ type CardItem = {
   click: () => void;
 }
 
-const summary = <p className={classes.Summary}>
+const summary = <Typography variant="body1" paragraph sx={{ ml: 2, mr: 2 }}>
 My email address is ianshinbro@gmail.com
-Feel free to click the button below to email me.</p>;
+<br />
+Feel free to click the button below to email me.</Typography>;
 
 const ContactCard: CardItem[] = [
     {
@@ -26,10 +28,10 @@ const ContactCard: CardItem[] = [
 
 const Contact: React.FC = () => {
   return (
-      <div>
+      <Box>
           {summary}
           <GridComponent cards={ContactCard as any}/>
-      </div >
+      </Box >
   );
 }
 export default Contact;

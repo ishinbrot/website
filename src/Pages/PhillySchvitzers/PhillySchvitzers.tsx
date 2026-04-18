@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import classes from './PhillySchvitzers.module.css';
 import phillySchvitzersLogo from '../../PhillySchvitzersInstagramLogo.png';
 
@@ -32,34 +33,34 @@ const PhillySchvitzers: React.FC = () => {
       </Grid>
       <Grid item xs={12} md={7}>
         <Box className={classes.textColumn}>
-          <p className={classes.Summary}>
+          <Typography variant="body1" paragraph sx={{ mb: 3 }}>
             <strong>The Philly Schvitzers</strong> is a running club I started in Philadelphia—built
             around group runs, good company, and embracing the schvitz (the sweat that comes with putting
             in the miles). Whether you are training for Broad Street, a half marathon, or just want a
             regular crew to run with, you are welcome to join us.
-          </p>
-          <section className={classes.Section}>
-            <h2>What we are about</h2>
-            <p>
-              We meet up to run together, hold each other accountable, and enjoy Philly’s neighborhoods on
+          </Typography>
+          <Box component="section" sx={{ mb: 3 }}>
+            <Typography variant="h5" component="h2" sx={{ mb: 1, fontWeight: 600 }}>What we are about</Typography>
+            <Typography variant="body1" paragraph>
+              We meet up to run together, hold each other accountable, and enjoy Philly's neighborhoods on
               foot. The vibe is supportive: show up as you are, run your pace, and stay for the post-run
               stories when the schedule allows.
-            </p>
-          </section>
-          <section className={classes.Section}>
-            <h2>Get in touch</h2>
-            <p>
+            </Typography>
+          </Box>
+          <Box component="section">
+            <Typography variant="h5" component="h2" sx={{ mb: 1, fontWeight: 600 }}>Get in touch</Typography>
+            <Typography variant="body1" paragraph>
               Follow{' '}
-              <a
+              <Link
                 href="https://www.instagram.com/thephillyschvitzers/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 The Philly Schvitzers on Instagram
-              </a>{' '}
+              </Link>{' '}
               for updates, runs, and photos.
-            </p>
-          </section>
+            </Typography>
+          </Box>
         </Box>
       </Grid>
     </Grid>
