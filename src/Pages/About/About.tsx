@@ -1,21 +1,9 @@
 import React, { useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Divider } from '@mui/material';
 import { openLink } from '../../assets/helperFunctions';
 import classes from './About.module.css';
 import GridComponent from '../../Components/GridComponent/GridComponent';
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
-
-const summary = <Typography variant="body1" paragraph sx={{ lineHeight: 1.6, p: 2, ml: 1, mr: 1 }}>
-Hello, My name is Ian Shinbrot. I am currently a Consultant at World Services working with Micro services, Java, Spring Boot, React, and AWS.
-<br />
-Throughout my profesional career I have worked as both a software developer and consultant in  projects that took me all over the Globe, from the United States, Australia, and Canada.<br/>
-I've had many opportunities to work with with Senior Leadership and various stakeholders in solving complex problems in the implementation, and pre-sales cycle for many projects.
-I have a proven and consistent track record of leading cross-funtional teams to ensure alignment with strategic initiatives, technical direction, and delivery to Senior Leadership at various firms in the Insurance and Financial Services sector.  <br/>
-While leading projects as a consultant, I have completed my MBA at Villanova Unviersity with a focus in Strategic Management.<br/>
-In addition to my work and studies, I have also continue to run various races, write a variety of poetry, and maintain an active blog of my many travels.
-Throughout my career I have dabbled in many technologies ranging from Java, Spring Boot, Hibernate, Typescript, AWS, Azure, Power Platform, SSIS, SAML, Visio, Power Virtual Agent, Dynamics 365, Weblogic, Websphere, Confluence and XSLT. <br/>
-I am always on the lookout for new technologies and tools by reading blogs such as CNET, Engadget, Udemy, Medium, etc.
-</Typography>;
 
 const workExperienceSummary = <Box>
     <Typography variant="h5" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Whitespace/World Services</Typography>
@@ -85,15 +73,71 @@ const About: React.FC = () => {
     ]
 
     return (
-        <div>
-            {summary}
+        <Box>
+            {/* Intro Section */}
+            <Box sx={{ mb: 6 }}>
+                <Typography
+                    variant="h2"
+                    component="h1"
+                    sx={{
+                        fontWeight: 700,
+                        letterSpacing: '-0.03em',
+                        mb: 2,
+                    }}
+                >
+                    About Me
+                </Typography>
+                <Typography
+                    variant="h5"
+                    component="p"
+                    sx={{
+                        color: 'text.secondary',
+                        fontWeight: 400,
+                        mb: 4,
+                        lineHeight: 1.8,
+                    }}
+                >
+                    Software Engineer & Consultant with a passion for building scalable systems, leading teams, and solving complex problems across the insurance and financial services sectors.
+                </Typography>
+                <Divider sx={{ mb: 4 }} />
+            </Box>
+
+            {/* Professional Summary */}
+            <Box sx={{ mb: 6 }}>
+                <Typography variant="h4" component="h2" sx={{ fontWeight: 600, mb: 3 }}>
+                    Professional Summary
+                </Typography>
+                <Typography variant="body1" paragraph sx={{ lineHeight: 1.8, mb: 2 }}>
+                    I'm a Senior Software Engineer and Consultant currently at Whitespace/World Services, specializing in microservices architecture, Java, Spring Boot, React, and AWS. With over a decade of professional experience, I've worked on mission-critical systems across the United States, Australia, and Canada—helping organizations modernize their infrastructure and solve complex business problems.
+                </Typography>
+                <Typography variant="body1" paragraph sx={{ lineHeight: 1.8, mb: 2 }}>
+                    I hold an MBA from Villanova University with a focus on Strategic Management, which has shaped my approach to balancing technical excellence with business impact. Throughout my career, I've led cross-functional teams, conducted pre-sales technical consultations, and delivered transformative projects for some of the industry's leading firms.
+                </Typography>
+                <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
+                    Beyond work, I'm an avid runner (part of the Philly Schvitzers running community), writer of poetry, and passionate about exploring new technologies through reading, online courses, and hands-on experimentation.
+                </Typography>
+            </Box>
+
+            {/* Skills & Technologies */}
+            <Box sx={{ mb: 6 }}>
+                <Typography variant="h4" component="h2" sx={{ fontWeight: 600, mb: 3 }}>
+                    Technical Skills
+                </Typography>
+                <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
+                    <strong>Languages & Frameworks:</strong> Java, Spring Boot, TypeScript, React, C++, Bash<br/>
+                    <strong>Cloud & Infrastructure:</strong> AWS, Microsoft Azure, Docker, Microservices Architecture<br/>
+                    <strong>Integration & Data:</strong> Mulesoft, SSIS, Azure Data Factory, REST/SOAP APIs, SAML<br/>
+                    <strong>Enterprise Tools:</strong> Salesforce/Apex, Power Platform (Power Automate, Power Virtual Agent, Power BI), Dynamics 365, Azure OpenAI<br/>
+                    <strong>Project Management:</strong> JIRA, Confluence, Agile/Scrum, Kanban<br/>
+                </Typography>
+            </Box>
+
+            {/* Quick Access Section */}
+            <Divider sx={{ my: 4 }} />
             <GridComponent cards={AboutList} />
             <CustomDialog display={showModal} click={displayModal} text={workExperienceSummary} title="Work Experience" />
-        </div >
+        </Box>
     );
 }
 export default About;
-
-
-
 
