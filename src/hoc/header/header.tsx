@@ -182,7 +182,7 @@ const Header: FC<HeaderProps> = ({ click }) => {
             variant="h6"
             component="div"
             className={classes.brand}
-            sx={{ flexGrow: 0 }}
+            sx={{ flexGrow: 0, color: '#ffffff' }}
           >
             Ian Shinbrot
           </Typography>
@@ -190,6 +190,7 @@ const Header: FC<HeaderProps> = ({ click }) => {
             variant="body2"
             component="span"
             className={classes.pageLabel}
+            sx={{ color: '#ffffff' }}
           >
             {pageLabel}
           </Typography>

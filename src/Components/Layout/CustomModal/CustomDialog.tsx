@@ -1,62 +1,13 @@
 import React from 'react';
-import { makeStyles, withStyles } from '@mui/styles';
-import Dialog from '@mui/material/Dialog';
-import Typography from '@mui/material/Typography';
-import MuiDialogTitle from '@mui/material/DialogTitle';
-import MuiDialogContent from '@mui/material/DialogContent';
-import IconButton from '@mui/material/IconButton';
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  IconButton,
+  Typography,
+  Box,
+} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import type { Theme } from '@mui/material/styles';
-import { appTheme } from '../../../theme';
-
-const styles = (theme: Theme) => ({
-  root: {
-      margin: 0,
-      padding: theme.spacing(2),
-  },
-  closeButton: {
-      position: 'absolute' as const,
-      right: theme.spacing(1),
-      top: theme.spacing(1),
-      color: theme.palette.grey[500],
-  },
-});
-
-const useStyles = makeStyles((theme: Theme) => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
-
-const DialogTitle = withStyles(styles)((props: any) => {
-  const { children, classes, onClose, ...other } = props;
-  return (
-      <MuiDialogTitle disableTypography className={classes.root} {...other}>
-          <Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}>
-            {children}
-          </Typography>
-          {onClose ? (
-              <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-                  <CloseIcon />
-              </IconButton>
-          ) : null}
-      </MuiDialogTitle>
-  );
-});
-
-const DialogContent = withStyles(
-  (theme: Theme) => ({
-    root: {
-        padding: theme.spacing(2),
-    },
-  }),
-  { defaultTheme: appTheme }
-)(MuiDialogContent);
 
 type CustomDialogProps = {
   click: () => void;
@@ -66,23 +17,53 @@ type CustomDialogProps = {
 };
 
 const CustomDialog: React.FC<CustomDialogProps> = (props) => {
-  useStyles();
   return (
-    <div>
-      <Dialog onClose={props.click} aria-labelledby="customized-dialog-title" open={props.display}>
-        <DialogTitle id="customized-dialog-title" onClose={props.click}>
+    <Dialog
+      onClose={props.click}
+      aria-labelledby="customized-dialog-title"
+      open={props.display}
+      PaperProps={{
+        sx: {
+          bgcolor: 'background.paper',
+          color: 'text.primary',
+        },
+      }}
+    >
+      <DialogTitle
+        id="customized-dialog-title"
+        sx={{
+          m: 0,
+          p: 2,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}>
           {props.title}
-        </DialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-            {props.text}
-          </Typography>
-        </DialogContent>
-      </Dialog>
-
-    </div>
+        </Typography>
+        <IconButton
+          aria-label="close"
+          onClick={props.click}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: 'grey.500',
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
+      <DialogContent dividers sx={{ p: 2 }}>
+        <Box sx={{ color: 'text.primary' }}>
+          {props.text}
+        </Box>
+      </DialogContent>
+    </Dialog>
   );
-}
+};
+
 export default CustomDialog;
 
 

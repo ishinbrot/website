@@ -1,9 +1,12 @@
 body {
   margin: 0;
-  background-color: #f0f2f7;
   font-family: 'DM Sans', 'Source Sans 3', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 code {

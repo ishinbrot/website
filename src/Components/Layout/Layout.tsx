@@ -24,14 +24,13 @@ const Layout: React.FC = () => {
 
   return (
       <MuiThemeProvider theme={currentTheme}>
-        <BrowserRouter basename={routerBasename}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: 'background.default' }}>
+          <BrowserRouter basename={routerBasename}>
             <Header />
             <Box
               component="main"
               sx={{
                 flex: 1,
-                bgcolor: 'background.default',
                 pt: { xs: 10, sm: 11 },
                 pb: 6,
               }}
@@ -50,8 +49,8 @@ const Layout: React.FC = () => {
               </Container>
             </Box>
             <Footer />
-          </Box>
-        </BrowserRouter>
+          </BrowserRouter>
+        </Box>
       </MuiThemeProvider>
   );
 }

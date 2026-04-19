@@ -1,50 +1,28 @@
 import React, { FC } from 'react';
 import { Box, Container, Typography, Link as MuiLink, Stack, Divider } from '@mui/material/';
 import { Link as RouterLink } from 'react-router-dom';
-import { makeStyles } from '@mui/styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import { appTheme } from '../../theme';
-
-const useStyles = makeStyles(
-  (theme: any) => ({
-    footer: {
-      backgroundColor: '#f8f9fa',
-      borderTop: '1px solid rgba(15, 23, 42, 0.08)',
-      marginTop: 'auto',
-      mt: 8,
-    },
-    socialIcon: {
-      fontSize: '1.5rem',
-      color: theme.palette.text.primary,
-      transition: 'color 0.2s ease-in-out',
-      '&:hover': {
-        color: theme.palette.primary.main,
-      },
-    },
-    link: {
-      color: theme.palette.text.primary,
-      textDecoration: 'none',
-      fontSize: '0.9rem',
-      transition: 'color 0.2s ease-in-out',
-      '&:hover': {
-        color: theme.palette.primary.main,
-      },
-    },
-  }),
-  { defaultTheme: appTheme }
-);
 
 /**
  * Footer component - displays footer with social links, navigation, and copyright
  */
 const Footer: FC = () => {
-  const classes = useStyles();
   const currentYear = new Date().getFullYear();
 
   return (
-    <Box component="footer" className={classes.footer} sx={{ py: 6 }}>
+    <Box
+      component="footer"
+      sx={{
+        bgcolor: 'background.paper',
+        borderTop: '1px solid',
+        borderColor: 'divider',
+        marginTop: 'auto',
+        mt: 8,
+        py: 6,
+      }}
+    >
       <Container maxWidth="md" sx={{ px: { xs: 2, sm: 3 } }}>
         {/* Social Links */}
         <Stack direction="row" spacing={3} justifyContent="center" sx={{ mb: 4 }}>
@@ -53,25 +31,49 @@ const Footer: FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub Profile"
-            sx={{ display: 'flex', alignItems: 'center' }}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: 'text.primary',
+              transition: 'color 0.2s ease-in-out',
+              '&:hover': {
+                color: 'primary.main',
+              },
+            }}
           >
-            <GitHubIcon className={classes.socialIcon} />
+            <GitHubIcon sx={{ fontSize: '1.5rem' }} />
           </MuiLink>
           <MuiLink
             href="https://www.linkedin.com/in/ianshinbrot/"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn Profile"
-            sx={{ display: 'flex', alignItems: 'center' }}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: 'text.primary',
+              transition: 'color 0.2s ease-in-out',
+              '&:hover': {
+                color: 'primary.main',
+              },
+            }}
           >
-            <LinkedInIcon className={classes.socialIcon} />
+            <LinkedInIcon sx={{ fontSize: '1.5rem' }} />
           </MuiLink>
           <MuiLink
             href="mailto:ianshinbro@gmail.com"
             title="Send Email"
-            sx={{ display: 'flex', alignItems: 'center' }}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: 'text.primary',
+              transition: 'color 0.2s ease-in-out',
+              '&:hover': {
+                color: 'primary.main',
+              },
+            }}
           >
-            <EmailIcon className={classes.socialIcon} />
+            <EmailIcon sx={{ fontSize: '1.5rem' }} />
           </MuiLink>
         </Stack>
 
@@ -84,25 +86,73 @@ const Footer: FC = () => {
           justifyContent="center"
           sx={{ mb: 4, textAlign: 'center' }}
         >
-          <MuiLink component={RouterLink} to="/" className={classes.link}>
+          <MuiLink
+            component={RouterLink}
+            to="/"
+            sx={{
+              color: 'text.primary',
+              textDecoration: 'none',
+              fontSize: '0.9rem',
+              transition: 'color 0.2s ease-in-out',
+              '&:hover': {
+                color: 'primary.main',
+              },
+            }}
+          >
             Home
           </MuiLink>
           <Typography variant="body2" color="text.secondary">
             •
           </Typography>
-          <MuiLink component={RouterLink} to="/About" className={classes.link}>
+          <MuiLink
+            component={RouterLink}
+            to="/About"
+            sx={{
+              color: 'text.primary',
+              textDecoration: 'none',
+              fontSize: '0.9rem',
+              transition: 'color 0.2s ease-in-out',
+              '&:hover': {
+                color: 'primary.main',
+              },
+            }}
+          >
             About
           </MuiLink>
           <Typography variant="body2" color="text.secondary">
             •
           </Typography>
-          <MuiLink component={RouterLink} to="/Projects" className={classes.link}>
+          <MuiLink
+            component={RouterLink}
+            to="/Projects"
+            sx={{
+              color: 'text.primary',
+              textDecoration: 'none',
+              fontSize: '0.9rem',
+              transition: 'color 0.2s ease-in-out',
+              '&:hover': {
+                color: 'primary.main',
+              },
+            }}
+          >
             Projects
           </MuiLink>
           <Typography variant="body2" color="text.secondary">
             •
           </Typography>
-          <MuiLink component={RouterLink} to="/Contact" className={classes.link}>
+          <MuiLink
+            component={RouterLink}
+            to="/Contact"
+            sx={{
+              color: 'text.primary',
+              textDecoration: 'none',
+              fontSize: '0.9rem',
+              transition: 'color 0.2s ease-in-out',
+              '&:hover': {
+                color: 'primary.main',
+              },
+            }}
+          >
             Contact
           </MuiLink>
         </Stack>
