@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/website/static/css/main.5eec4ea5.css",
-    "main.js": "/website/static/js/main.b9904379.js",
+    "main.js": "/website/static/js/main.fbd03ecc.js",
     "static/media/PhillySchvitzersInstagramLogo.png": "/website/static/media/PhillySchvitzersInstagramLogo.296f089b86f88cd54ff8.png",
     "index.html": "/website/index.html",
     "main.5eec4ea5.css.map": "/website/static/css/main.5eec4ea5.css.map",
-    "main.b9904379.js.map": "/website/static/js/main.b9904379.js.map"
+    "main.fbd03ecc.js.map": "/website/static/js/main.fbd03ecc.js.map"
   },
   "entrypoints": [
     "static/css/main.5eec4ea5.css",
-    "static/js/main.b9904379.js"
+    "static/js/main.fbd03ecc.js"
   ]
 }
