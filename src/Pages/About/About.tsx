@@ -6,23 +6,23 @@ import GridComponent from '../../Components/GridComponent/GridComponent';
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 
 const summary = <Typography variant="body1" paragraph sx={{ lineHeight: 1.6, p: 2, ml: 1, mr: 1 }}>
-Hello, My name is Ian Shinbrot. I am currently a Consultant at CapTech Consulting focusing in the Financial Services sector.
+Hello, My name is Ian Shinbrot. I am currently a Consultant at World Services working with Micro services, Java, Spring Boot, React, and AWS.
 <br />
-Throughout my profesional career I have worked as a consultant in global projects that took me all over the Globe, from the United States, Australia, and Canada.<br/>
+Throughout my profesional career I have worked as both a software developer and consultant in  projects that took me all over the Globe, from the United States, Australia, and Canada.<br/>
 I've had many opportunities to work with with Senior Leadership and various stakeholders in solving complex problems in the implementation, and pre-sales cycle for many projects.
 I have a proven and consistent track record of leading cross-funtional teams to ensure alignment with strategic initiatives, technical direction, and delivery to Senior Leadership at various firms in the Insurance and Financial Services sector.  <br/>
 While leading projects as a consultant, I have completed my MBA at Villanova Unviersity with a focus in Strategic Management.<br/>
 In addition to my work and studies, I have also continue to run various races, write a variety of poetry, and maintain an active blog of my many travels.
-Throughout my career I have dabbled in many technologies ranging from Java, Spring Boot, Hibernate, Power Platform, SSIS, SAML, Visio, Power Virtual Agent, Dynamics 365, Weblogic, Websphere, Confluence and XSLT. <br/>
+Throughout my career I have dabbled in many technologies ranging from Java, Spring Boot, Hibernate, Typescript, AWS, Azure, Power Platform, SSIS, SAML, Visio, Power Virtual Agent, Dynamics 365, Weblogic, Websphere, Confluence and XSLT. <br/>
 I am always on the lookout for new technologies and tools by reading blogs such as CNET, Engadget, Udemy, Medium, etc.
 </Typography>;
 
 const workExperienceSummary = <Box>
     <Typography variant="h5" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Whitespace/World Services</Typography>
     <Typography variant="body1" paragraph>
-    I currently work at Whitespace/World Services as a Senior Software Engineer/Product Incident Lead.
+    I currently work at Whitespace/World Services as a Senior Software Engineer and Product Incident Lead.
     We work in an Agile Scrum Environment (Kanban) and use JIRA for project management.
-    The project utilizes Microservices architecture and is built with Spring Boot, React, and AWS. This project is in the government public sector.
+    The project utilizes Microservices architecture and is built with Spring Boot, React, and AWS. This project is in the public sector.
     I previously build a POC utilizng React, Spring Boot, and AWS to develop a web application.
     I additionally scraped data from a website and used it to populate a database using Java and Spring Boot.
     </Typography>
@@ -37,6 +37,8 @@ const workExperienceSummary = <Box>
             I led the Microsoft Power Platform efforts in the utilization of various services such as Power Virtual Agent, Power Automate, and Azure OpenAI toward the implementation of a conversational AI Chatbot. <br/>
             I led the initiative to orchestrate engaging technical discussions with various SMEs to foster innovation and cultivate meaningful relationships for future implementation initiatives. <br/>
             I optimized the onboarding process for multiple Account Management Teams by designing and implementing Sharepoint pages to enhance knowledge accessbility and collobration across all account projects.
+            I worked with Salesforce and Apex in Integrating APIs into the Salesforce environment to allow for better data management and reporting. <br/>
+            I led the initiative for the Systems Integration Practice Area on CapTech University to create a comprehensive curriculum for new hires and existing employees to learn about the various tools and technologies used in the Systems Integration space. <br/>
     </Typography>
     
     <Typography variant="h5" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Equisoft</Typography>
