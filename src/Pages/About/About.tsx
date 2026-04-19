@@ -1,47 +1,61 @@
 import React, { useState } from 'react';
 import { Box, Typography, Divider } from '@mui/material';
 import { openLink } from '../../assets/helperFunctions';
-import classes from './About.module.css';
 import GridComponent from '../../Components/GridComponent/GridComponent';
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 
 const workExperienceSummary = <Box>
-    <Typography variant="h5" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Whitespace/World Services</Typography>
+    <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Whitespace/World Services</Typography>
     <Typography variant="body1" paragraph>
-    I currently work at Whitespace/World Services as a Senior Software Engineer and Product Incident Lead.
-    We work in an Agile Scrum Environment (Kanban) and use JIRA for project management.
-    The project utilizes Microservices architecture and is built with Spring Boot, React, and AWS. This project is in the public sector.
-    I previously build a POC utilizng React, Spring Boot, and AWS to develop a web application.
-    I additionally scraped data from a website and used it to populate a database using Java and Spring Boot.
+    I currently work at Whitespace/World Services as a Senior Software Engineer and Product Incident Lead. We work in an Agile Scrum Environment (Kanban) and use JIRA for project management. The project utilizes Microservices architecture and is built with Spring Boot, React, and AWS. This project is in the public sector. I previously built a POC utilizing React, Spring Boot, and AWS to develop a web application. I additionally scraped data from a website and used it to populate a database using Java and Spring Boot.
     </Typography>
 
-    <Typography variant="h5" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>CapTech Consulting</Typography>
+    <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>CapTech Consulting</Typography>
+    <Typography variant="body2" paragraph sx={{ mb: 2 }}>
+      I previously worked at CapTech Consulting focusing on the Financial Services Sector as a Developer and Analyst.
+    </Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I led a multi-year project in modernizing Authentication-based APIs from SOAP to REST in all areas, including development, requirement gathering, and working on quarterly roadmaps to ensure a successful delivery. The tools used were JIRA, Confluence, Java, Swagger, and Spring Boot.
+    </Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I led the Fraud/Disputes initiatives in the integration space for a Dynamics 365 Application, Mulesoft, and VROL (Visa Resolve Online) with Restful Services.
+    </Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I led the Microsoft Power Platform efforts utilizing services such as Power Virtual Agent, Power Automate, and Azure OpenAI toward implementing a conversational AI Chatbot.
+    </Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I led the initiative to orchestrate engaging technical discussions with various SMEs to foster innovation and cultivate meaningful relationships for future implementation initiatives.
+    </Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I optimized the onboarding process for multiple Account Management Teams by designing and implementing SharePoint pages to enhance knowledge accessibility and collaboration across all account projects.
+    </Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I worked with Salesforce and Apex in integrating APIs into the Salesforce environment to allow for better data management and reporting.
+    </Typography>
     <Typography variant="body1" paragraph>
-            I previously worked at CapTech Consulting and focus on the Financial Services Sector as a Developor and Analyst. <br/>
-            I led a multi-year project in modernizing Authentication-based API's from SOAP to REST in all areas, including development, requirement gathering, and working on quarterly roadmaps to ensure a successful delivery.
-          <br/>
-          The tools used in this project were JIRA, Confluence, JAVA, Swagger, and Spring Boot
-            I led the Fraud/Disputes initiatves in the integration space in the communication of a Dynamics 365 Appliaction, Mulesoft, and VROL (Visa Resolve Online) with Restful Services. <br/>
-            I led the Microsoft Power Platform efforts in the utilization of various services such as Power Virtual Agent, Power Automate, and Azure OpenAI toward the implementation of a conversational AI Chatbot. <br/>
-            I led the initiative to orchestrate engaging technical discussions with various SMEs to foster innovation and cultivate meaningful relationships for future implementation initiatives. <br/>
-            I optimized the onboarding process for multiple Account Management Teams by designing and implementing Sharepoint pages to enhance knowledge accessbility and collobration across all account projects.
-            I worked with Salesforce and Apex in Integrating APIs into the Salesforce environment to allow for better data management and reporting. <br/>
-            I led the initiative for the Systems Integration Practice Area on CapTech University to create a comprehensive curriculum for new hires and existing employees to learn about the various tools and technologies used in the Systems Integration space. <br/>
+      I led the initiative for the Systems Integration Practice Area on CapTech University to create a comprehensive curriculum for new hires and existing employees to learn about the various tools and technologies used in the Systems Integration space.
     </Typography>
     
-    <Typography variant="h5" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Equisoft</Typography>
+    <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Equisoft</Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I worked at Equisoft as a consultant specializing in the Life Insurance Industry. I have worked with many clients in modernizing their infrastructure using technologies such as SAML, SSIS, Microsoft Azure, and XSLT to improve client performance by a minimum of 10%.
+    </Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I led global teams with implementations and business processes in modernizing company infrastructure and integrating digital with the data-driven OIPA Application in a SaaS environment. I worked with SSIS and Azure Data Factory to generate hundreds of reports and enable quicker information gathering related to various types of claims.
+    </Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I assisted in mentoring new hires and various client teams in utilizing the OIPA application. I also implemented SSO solutions utilizing both SAML and Microsoft Azure AD, as well as various RESTful and SOAP services.
+    </Typography>
     <Typography variant="body1" paragraph>
-    I worked at Equisoft as a consultant specializing in the Life Insurance Industry. I have worked with many clients in modernizing their infrastructure using technologies such as SAML, SSIS, Microsoft Azure, and XSLT to improve clients performance by a minimum of 10%.
-I have led global teams with implementations and business processes in modernizing companies infrastructure and integrate digital with the data driven OIPA Application in a Saas environment. I worked with SSIS and Azure Data Factory to generate 100s of reports and view data and allow for quicker information gathering related to gathering many different types of claims
-I assisted in mentoring new hires, as well as the various client teams in utilizing the OIPA application. I have assisted of SSO implementations utilizing both SAML and Microsoft Azure AD, as well as various RESTful and Soap services.
-I designed and implemented a new migration strategy for multiple projects using Equisoft Design to improve environment configurations by 30%. The main languages and frameworks I worked on have been Azure, Spring, Hibernate, and Java.
+      I designed and implemented a new migration strategy for multiple projects using Equisoft Design to improve environment configurations by 30%. The main languages and frameworks I worked with have been Azure, Spring, Hibernate, and Java.
     </Typography>
     
-    <Typography variant="h5" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Lockheed Martin</Typography>
+    <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Lockheed Martin</Typography>
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I worked at Lockheed Martin as an Associate Software Engineer on the LRDR radar system.
+    </Typography>
     <Typography variant="body1" paragraph>
-              I worked at Lockheed Martin as an Associate Software Engineer working on the LRDR radar system. <br/>
-              I work in an Agile Scrum Environment utilizing C++ as the primary language, while performing some tasks <br/>
-              with bash scripting. My project utilizing GIT, Crucible, and Jenkins for our primary functions
+      I worked in an Agile Scrum Environment utilizing C++ as the primary language, while performing some tasks with bash scripting. The project utilized GIT, Crucible, and Jenkins for our primary functions.
     </Typography>
 </Box>;
 
@@ -75,7 +89,7 @@ const About: React.FC = () => {
     return (
         <Box>
             {/* Intro Section */}
-            <Box sx={{ mb: 6 }}>
+            <Box sx={{ mb: { xs: 4, sm: 6 } }}>
                 <Typography
                     variant="h2"
                     component="h1"
@@ -83,6 +97,7 @@ const About: React.FC = () => {
                         fontWeight: 700,
                         letterSpacing: '-0.03em',
                         mb: 2,
+                        fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
                     }}
                 >
                     About Me
@@ -103,8 +118,8 @@ const About: React.FC = () => {
             </Box>
 
             {/* Professional Summary */}
-            <Box sx={{ mb: 6 }}>
-                <Typography variant="h4" component="h2" sx={{ fontWeight: 600, mb: 3 }}>
+            <Box sx={{ mb: { xs: 4, sm: 6 } }}>
+                <Typography variant="h4" component="h2" sx={{ fontWeight: 600, mb: 3, fontSize: { xs: '1.3rem', md: '1.5rem' } }}>
                     Professional Summary
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ lineHeight: 1.8, mb: 2 }}>
@@ -119,15 +134,15 @@ const About: React.FC = () => {
             </Box>
 
             {/* Skills & Technologies */}
-            <Box sx={{ mb: 6 }}>
-                <Typography variant="h4" component="h2" sx={{ fontWeight: 600, mb: 3 }}>
+            <Box sx={{ mb: { xs: 4, sm: 6 } }}>
+                <Typography variant="h4" component="h2" sx={{ fontWeight: 600, mb: 3, fontSize: { xs: '1.3rem', md: '1.5rem' } }}>
                     Technical Skills
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-                    <strong>Languages & Frameworks:</strong> Java, Spring Boot, TypeScript, React, C++, Bash<br/>
+                    <strong>Languages & Frameworks:</strong> Java, Spring Boot, TypeScript, React, C#, Bash<br/>
                     <strong>Cloud & Infrastructure:</strong> AWS, Microsoft Azure, Docker, Microservices Architecture<br/>
-                    <strong>Integration & Data:</strong> Mulesoft, SSIS, Azure Data Factory, REST/SOAP APIs, SAML<br/>
-                    <strong>Enterprise Tools:</strong> Salesforce/Apex, Power Platform (Power Automate, Power Virtual Agent, Power BI), Dynamics 365, Azure OpenAI<br/>
+                    <strong>Integration & Data:</strong> Mulesoft, SSIS, Azure Data Factory, SQL, REST/SOAP APIs, SAML, APIM, JMS/SQS<br/>
+                    <strong>Enterprise Tools:</strong> Salesforce/Apex, Power Platform (Power Automate, Power Virtual Agent, Power BI), Dynamics 365, Visio, Mural, OIPA (Oracle Insurance Policy Administration)<br/>
                     <strong>Project Management:</strong> JIRA, Confluence, Agile/Scrum, Kanban<br/>
                 </Typography>
             </Box>
