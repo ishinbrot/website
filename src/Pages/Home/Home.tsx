@@ -25,7 +25,7 @@ const Home: React.FC = () => {
       </Typography>
       <Divider sx={{ mb: 3 }} />
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-        Hello — welcome to my portfolio site. I am currently a Senior Consultant at World Services.
+        Hello — welcome to my portfolio site. I am currently a Technical Lead at World Services.
         This site highlights projects, blog snippets, poetry, and the Philly Schvitzers running group.
       </Typography>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>

@@ -7,7 +7,7 @@ import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 const workExperienceSummary = <Box>
     <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Whitespace/World Services</Typography>
     <Typography variant="body1" paragraph>
-    I currently work at Whitespace/World Services as a Senior Software Engineer and Product Incident Lead. We work in an Agile Scrum Environment (Kanban) and use JIRA for project management. The project utilizes Microservices architecture and is built with Spring Boot, React, and AWS. This project is in the public sector. I previously built a POC utilizing React, Spring Boot, and AWS to develop a web application. I additionally scraped data from a website and used it to populate a database using Java and Spring Boot.
+    I currently work at Whitespace/World Services as a Technical Lead/Senior Software Engineer and Product Incident Lead. We work in an Agile Scrum Environment (Kanban) and use JIRA for project management. The project utilizes Microservices architecture and is built with Spring Boot, React, and AWS (DynamoDB, Lambda, RDS). This project is in the public sector. I previously built a POC utilizing React, Spring Boot, and AWS to develop a web application. I additionally scraped data from a website and used it to populate a database using Java and Spring Boot.
     </Typography>
 
     <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>CapTech Consulting</Typography>

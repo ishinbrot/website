@@ -514,7 +514,15 @@ new Poem("Philly Schvitzers", "2025",
 "Quarter 2 kicked off and work got wild,\n"+
 "Philly boiled while work had an interesting twist.\n"+
 "I ran to sweat, couldn't call it quits—\n"+
-"Join the Philly Schvitzers and embrace the Schvitz.")
+"Join the Philly Schvitzers and embrace the Schvitz."),
+new Poem("Spirit Airlines", "2026",
+  "Unfortunately Spirit Airlines is no more\n"+
+"They filed for bankruptcy twice and then hit a floor\n"+
+ "America tried to bail them out\n"+
+"Spirit declined and now they are out\n"+
+"No more yellow planes in the sky\n"+
+"I never flew Spirit and now I never will"
+)
 ];
 
 /** Oldest year first; non-numeric years sort last. */
