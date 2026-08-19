@@ -1,9 +1,9 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import classes from './Poetry.module.css';
 import GridComponent from '../../Components/GridComponent/GridComponent';
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
-import Poems from './poem-data';
+import { getPoetry } from '../../utils/supabase/client'
 import Poem from './models/poem';
 
 const summary = <p className={classes.Summary}>Here are some poems I started during the 2020 lock down, and have continued since then.
@@ -18,10 +18,29 @@ type PoetryGridCard = {
 };
 
 const Poetry: React.FC = () => {
+const [poems, setPoems] = useState<Poem[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [showPoem, setShowPoem] = useState(false);
   const [poemText, setPoemText] = useState('');
   const [poemTitle, setPoemTitle] = useState('');
   const [selectedYear, setSelectedYear] = useState<string>('');
+
+  // Fetch poems from Supabase on component mount
+  useEffect(() => {
+    async function fetchPoems() {
+      try {
+        setLoading(true);
+        const data = await getPoetry();
+        setPoems(data || []);
+      } catch (error) {
+        console.error('Error fetching poetry:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchPoems();
+  }, []);
 
   const openPoem = useCallback((poem: Poem) => {
     setPoemText(poem.text);
@@ -37,19 +56,19 @@ const Poetry: React.FC = () => {
    * Get unique years from all poems, sorted in descending order
    */
   const uniqueYears = useMemo(() => {
-    const years = Array.from(new Set(Poems.map((poem) => poem.year))).sort().reverse();
+    const years = Array.from(new Set(poems.map((poem) => poem.year))).sort().reverse();
     return years;
-  }, []);
+  }, [poems]);
 
   /**
    * Filter poems based on selected year
    */
   const filteredPoems = useMemo(() => {
     if (!selectedYear) {
-      return Poems;
+      return poems;
     }
-    return Poems.filter((poem) => poem.year === selectedYear);
-  }, [selectedYear]);
+    return poems.filter((poem) => poem.year === selectedYear);
+  }, [selectedYear, poems]);
 
   const gridCards = useMemo((): PoetryGridCard[] => {
     return filteredPoems.map((poem) => ({

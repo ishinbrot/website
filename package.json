@@ -9,6 +9,8 @@
     "@mui/icons-material": "^5.15.7",
     "@mui/material": "^5.15.7",
     "@mui/styles": "^5.15.7",
+    "@supabase/ssr": "^0.12.4",
+    "@supabase/supabase-js": "^2.112.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
