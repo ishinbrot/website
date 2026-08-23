@@ -1,10 +1,11 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { Box, CircularProgress, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import classes from './Poetry.module.css';
 import GridComponent from '../../Components/GridComponent/GridComponent';
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 import { getPoetry } from '../../utils/supabase/client'
 import Poem from './models/poem';
+import { posthog } from '../../analytics';
 
 const summary = <p className={classes.Summary}>Here are some poems I started during the 2020 lock down, and have continued since then.
 <br/> I hope you enjoy reading them!</p>
@@ -42,11 +43,16 @@ const [poems, setPoems] = useState<Poem[]>([]);
     fetchPoems();
   }, []);
 
-  const openPoem = useCallback((poem: Poem) => {
-    setPoemText(poem.text);
-    setPoemTitle(poem.title);
-    setShowPoem(true);
-  }, []);
+const openPoem = useCallback((poem: Poem) => {
+  posthog.capture('poem_opened', {
+    year: poem.year,
+    title: poem.title,
+  });
+
+  setPoemText(poem.text);
+  setPoemTitle(poem.title);
+  setShowPoem(true);
+}, []);
 
   const closeDialog = useCallback(() => {
     setShowPoem(false);
@@ -105,8 +111,14 @@ const [poems, setPoems] = useState<Poem[]>([]);
           </FormControl>
         </Box>
 
+{/* Conditional Loading Spinner */}
+      {loading ? (
+        <Box sx={{ display: 'flex', justifyContent: 'center', py: 6 }}>
+          <CircularProgress />
+        </Box>
+      ) : (
         <GridComponent cards={gridCards} />
-        {showPoem ? (
+      )}        {showPoem ? (
           <CustomDialog
             display={showPoem}
             click={closeDialog}

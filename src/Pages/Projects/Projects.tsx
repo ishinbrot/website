@@ -4,6 +4,7 @@ import { openLink } from '../../assets/helperFunctions';
 import classes from './Projects.module.css';
 import GridComponent from '../../Components/GridComponent/GridComponent';
 import Divider from '@mui/material/Divider';
+import { posthog } from '../../analytics';
 
 type CardItem = {
   title: string;
@@ -42,13 +43,24 @@ const reactNativeProjectList: CardItem[] = [
         title: 'SHOP',
         description: "This application allows you to add items to a shopping list and create new orders. The application supports multiple users and everything is stored on firebase.",
         linkTitle: 'Download',
-        click: () => openLink('https://github.com/ishinbrot/website/blob/master/src/Pages/Projects/SHOP.apk')
+        click: () => {
+            posthog.capture('shop_apk_clicked', {
+                title: 'SHOP'
+            });
+            openLink('https://github.com/ishinbrot/website/blob/master/src/Pages/Projects/SHOP.apk')
+        }
     },
     {
         title: 'Places',
         description: "This application allows you to take a picture and specify a location where the picture was taken. The phone is able to locate you by GPS, or you are able to select a location from google maps.",
         linkTitle: 'Download',
-        click: () => openLink('https://github.com/ishinbrot/website/blob/master/src/Pages/Projects/SHOP.apk')
+        click: () => {
+            posthog.capture('places_apk_clicked', {
+                title: 'Places'
+            });
+            openLink('https://github.com/ishinbrot/website/blob/master/src/Pages/Projects/Places.apk')
+        
+        }
     },
 ]
 
@@ -57,7 +69,9 @@ const Projects: React.FC = () => {
       <Box>
           <Box sx={{ mb: 4 }}>
               <Typography variant="body1" paragraph>This page show-cases the many programming projects I have done throughout my undergraduate and early career.</Typography>
-              <Button variant="outlined" onClick={() => { return window.location.href = "https://github.com/ishinbrot" }}>LINK TO GITHUB</Button>
+              <Button variant="outlined" onClick={() => { 
+                  posthog.capture('github_clicked');
+                    return window.location.href = "https://github.com/ishinbrot" }}>LINK TO GITHUB</Button>
           </Box>
           {webProjectsSummary}
           <GridComponent cards={WebProjectList} />

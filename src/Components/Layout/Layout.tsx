@@ -14,6 +14,7 @@ import Projects from '../../Pages/Projects/Projects';
 import Poetry from '../../Pages/Poetry/Poetry';
 import Blog from '../../Pages/Blog/Blog';
 import PhillySchvitzers from '../../Pages/PhillySchvitzers/PhillySchvitzers';
+import Analytics from './Analytics';
 
 /** Empty in `npm start` so http://localhost:3000/ works; `/website` on production build for GitHub Pages. */
 const routerBasename = (process.env.PUBLIC_URL || '').replace(/\/$/, '');
@@ -26,6 +27,7 @@ const Layout: React.FC = () => {
       <MuiThemeProvider theme={currentTheme}>
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: 'background.default' }}>
           <BrowserRouter basename={routerBasename}>
+        <Analytics />
             <Header />
             <Box
               component="main"

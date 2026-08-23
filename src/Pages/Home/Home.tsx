@@ -29,8 +29,8 @@ const Home: React.FC = () => {
         This site highlights projects, blog snippets, poetry, and the Philly Schvitzers running group.
       </Typography>
       <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-        The site is built with React, TypeScript, and Material UI (last updated August 2026). Many posts
-        link out to full articles on Medium. GitHub projects are fetched from GitHub's API and displayed here. The poetry section is powered by Supabase, which serves as a backend database for storing and retrieving poems.
+        The site is built with React, TypeScript, Material UI, and Supabase (last updated August 2026). Many posts
+        link out to full articles on Medium, and my poetry is retrieved from Supabase. GitHub projects are fetched from GitHub's API and displayed here. The poetry section is powered by Supabase, which serves as a backend database for storing and retrieving poems.
         Use the menu to explore, and reach out via Contact if you
         have feedback.
       </Typography>

@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import classes from './Contact.module.css';
 import GridComponent from '../../Components/GridComponent/GridComponent';
 import { openLink } from '../../assets/helperFunctions';
+import { posthog } from '../../analytics';
 
 type CardItem = {
   title: string;
@@ -21,8 +22,10 @@ const ContactCard: CardItem[] = [
         title: 'Contact Information',
         description: 'Please click the link below to send me an email.',
         linkTitle: 'Email',
-        click: () => openLink('mailto:ianshinbro@gmail.com?Subject=Website Feedback')
-        
+        click: () => {          
+  posthog.capture('contact_email_clicked');
+  openLink('mailto:ianshinbro@gmail.com?Subject=Website Feedback');
+}        
     }
 ]
 

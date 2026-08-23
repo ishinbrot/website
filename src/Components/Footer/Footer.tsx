@@ -44,7 +44,7 @@ const Footer: FC = () => {
             <GitHubIcon sx={{ fontSize: '1.5rem' }} />
           </MuiLink>
           <MuiLink
-            href="https://www.linkedin.com/in/ianshinbrot/"
+            href="https://www.linkedin.com/in/ishinbrot/"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn Profile"

@@ -13,6 +13,7 @@ import Divider from '@mui/material/Divider';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
 import { ToText, openLink } from '../../assets/helperFunctions';
+import { posthog } from '../../analytics';
 
 type BlogPost = {
   key: number;
@@ -143,7 +144,10 @@ const Blog: React.FC = () => {
       {error ? (
         <Alert severity="warning" sx={{ mb: 2 }}>
           {error} You can still{' '}
-          <Button size="small" onClick={() => openLink('https://medium.com/@ianshinbro')}>
+          <Button size="small" onClick={() =>{
+            posthog.capture('medium_directly_clicked');
+             openLink('https://medium.com/@ianshinbro')}
+          }>
             browse Medium directly
           </Button>
           .
@@ -198,7 +202,14 @@ const Blog: React.FC = () => {
                   <Button
                     size="small"
                     endIcon={<OpenInNewIcon fontSize="small" />}
-                    onClick={() => openInNewTab(post.link)}
+                    onClick={() => {
+                      posthog.capture('blog_post_clicked', {
+                        title: post.title,
+                        categories: post.categories,
+                      });
+
+                      openInNewTab(post.link);
+                    }}
                   >
                     Read on Medium
                   </Button>
