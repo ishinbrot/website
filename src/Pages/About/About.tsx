@@ -5,14 +5,21 @@ import GridComponent from '../../Components/GridComponent/GridComponent';
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 
 const workExperienceSummary = <Box>
-    <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Whitespace/World Services</Typography>
+    <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Bank of New York</Typography>
     <Typography variant="body1" paragraph>
-    I currently work at Whitespace/World Services as a Technical Lead/Senior Software Engineer and Product Incident Lead. We work in an Agile Scrum Environment (Kanban) and use JIRA for project management. The project utilizes Microservices architecture and is built with Spring Boot, React, and AWS (DynamoDB, Lambda, RDS). This project is in the public sector. I previously built a POC utilizing React, Spring Boot, and AWS to develop a web application. I additionally scraped data from a website and used it to populate a database using Java and Spring Boot.
+    I currently work at Bank of New York as a Vice President, Full-Stack Engineer for Managed Account Solutions working with BNY Archer. 
     </Typography>
 
+    <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Government Consulting Experience</Typography>
+    <Typography variant="body1" paragraph>
+    I previously worked at a leading government subcontractor as the Technical Lead and Production Incident Lead.
+    My team worked in an Agile Scrum Environment (Kanban) and used JIRA for project management.
+    The project utilized a Microservice architecture and was built with Spring Boot, React, AWS, Postgres, and DynamoDB.
+    I additionally built a POC utilizing React, Spring Boot, and AWS to develop a web application to replace a Content Management System.
+    </Typography>
     <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>CapTech Consulting</Typography>
-    <Typography variant="body2" paragraph sx={{ mb: 2 }}>
-      I previously worked at CapTech Consulting focusing on the Financial Services Sector as a Developer and Analyst.
+    <Typography variant="body1" paragraph sx={{ mb: 2 }}>
+      I previously worked at CapTech Consulting focusing on the Financial Services Sector as a Technical Lead, Developer and Analyst specializing in API development, integrations, and Salesforce development.
     </Typography>
     <Typography variant="body1" paragraph sx={{ mb: 2 }}>
       I led a multi-year project in modernizing Authentication-based APIs from SOAP to REST in all areas, including development, requirement gathering, and working on quarterly roadmaps to ensure a successful delivery. The tools used were JIRA, Confluence, Java, Swagger, and Spring Boot.
@@ -33,7 +40,7 @@ const workExperienceSummary = <Box>
       I worked with Salesforce and Apex in integrating APIs into the Salesforce environment to allow for better data management and reporting.
     </Typography>
     <Typography variant="body1" paragraph>
-      I led the initiative for the Systems Integration Practice Area on CapTech University to create a comprehensive curriculum for new hires and existing employees to learn about the various tools and technologies used in the Systems Integration space.
+      I led the initiative for the Systems Integration Practice Area on CapTech University to create a comprehensive curriculum (CapTech University) for new hires and existing employees to learn about the various tools and technologies used in the Systems Integration space.
     </Typography>
     
     <Typography variant="h4" component="h3" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>Equisoft</Typography>
@@ -123,7 +130,7 @@ const About: React.FC = () => {
                     Professional Summary
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ lineHeight: 1.8, mb: 2 }}>
-                    I'm a Senior Software Engineer and Consultant currently at Whitespace/World Services, specializing in microservices architecture, Java, Spring Boot, React, and AWS. With over a decade of professional experience, I've worked on mission-critical systems across the United States, Australia, and Canada—helping organizations modernize their infrastructure and solve complex business problems.
+                    I'm a Vice President, Full Stack Engineer currently at Bank of New York (Managed Account Solutions). With over a decade of professional experience, I've worked on mission-critical systems across the United States, Australia, and Canada—helping organizations modernize their infrastructure and solve complex business problems.
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ lineHeight: 1.8, mb: 2 }}>
                     I hold an MBA from Villanova University with a focus on Strategic Management, which has shaped my approach to balancing technical excellence with business impact. Throughout my career, I've led cross-functional teams, conducted pre-sales technical consultations, and delivered transformative projects for some of the industry's leading firms.
@@ -139,7 +146,7 @@ const About: React.FC = () => {
                     Technical Skills
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-                    <strong>Languages & Frameworks:</strong> Java, Spring Boot, TypeScript, React, C#, Bash<br/>
+                    <strong>Languages & Frameworks:</strong> Java, Spring Boot, Python, Perl, TypeScript, React, C#, Bash<br/>
                     <strong>Cloud & Infrastructure:</strong> AWS, Microsoft Azure, Docker, Microservices Architecture<br/>
                     <strong>Integration & Data:</strong> Mulesoft, SSIS, Azure Data Factory, SQL, REST/SOAP APIs, SAML, APIM, JMS/SQS<br/>
                     <strong>Enterprise Tools:</strong> Salesforce/Apex, Power Platform (Power Automate, Power Virtual Agent, Power BI), Dynamics 365, Visio, Mural, OIPA (Oracle Insurance Policy Administration)<br/>
@@ -155,4 +162,3 @@ const About: React.FC = () => {
     );
 }
 export default About;
-

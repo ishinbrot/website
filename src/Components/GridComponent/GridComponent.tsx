@@ -22,7 +22,7 @@ const GridComponent = (props: gridElements) :any => {
         <div>
             <Grid container spacing={4} className={classes.container}>
                 {props.cards.map((el :  gridMember) : any=> (
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid item key={el.title} xs={12} sm={6} md={4}>
                         <CardComponent className={classes.cardComponent}
                          title={el.title} description={el.description} linkTitle={el.linkTitle} click={el.click} link={el.link}/>
                     </Grid>

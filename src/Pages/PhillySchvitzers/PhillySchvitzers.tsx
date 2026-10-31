@@ -58,7 +58,15 @@ const PhillySchvitzers: React.FC = () => {
               >
                 The Philly Schvitzers on Instagram
               </Link>{' '}
-              for updates, runs, and photos.
+              for updates, runs, and photos.{' '}
+              <Link
+                href="https://www.strava.com/clubs/pjwraw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join us on Strava
+              </Link>
+              .
             </Typography>
           </Box>
         </Box>

@@ -5,6 +5,7 @@ import GridComponent from '../../Components/GridComponent/GridComponent';
 import CustomDialog from '../../Components/Layout/CustomModal/CustomDialog';
 import { getPoetry } from '../../utils/supabase/client'
 import Poem from './models/poem';
+import localPoems from './poem-data';
 import { posthog } from '../../analytics';
 
 const summary = <p className={classes.Summary}>Here are some poems I started during the 2020 lock down, and have continued since then.
@@ -32,9 +33,10 @@ const [poems, setPoems] = useState<Poem[]>([]);
       try {
         setLoading(true);
         const data = await getPoetry();
-        setPoems(data || []);
+        setPoems(data);
       } catch (error) {
         console.error('Error fetching poetry:', error);
+        setPoems(localPoems);
       } finally {
         setLoading(false);
       }

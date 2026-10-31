@@ -17,7 +17,9 @@ import PhillySchvitzers from '../../Pages/PhillySchvitzers/PhillySchvitzers';
 import Analytics from './Analytics';
 
 /** Empty in `npm start` so http://localhost:3000/ works; `/website` on production build for GitHub Pages. */
-const routerBasename = (process.env.PUBLIC_URL || '').replace(/\/$/, '');
+const routerBasename = process.env.NODE_ENV === 'production'
+  ? (process.env.PUBLIC_URL || '').replace(/\/$/, '')
+  : '';
 
 const Layout: React.FC = () => {
   const { isDarkMode } = useThemeMode();
@@ -58,4 +60,3 @@ const Layout: React.FC = () => {
 }
 
 export default Layout;
-

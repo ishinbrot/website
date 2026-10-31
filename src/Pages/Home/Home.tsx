@@ -1,39 +1,85 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
+import { Box, Divider, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import GridComponent from '../../Components/GridComponent/GridComponent';
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+  const homeCards = [
+    {
+      title: 'Projects',
+      description: 'Explore software projects and applications I have built.',
+      linkTitle: 'View Projects',
+      path: '/Projects',
+    },
+    {
+      title: 'About Me',
+      description: 'Learn more about my experience, skills, and background.',
+      linkTitle: 'About Me',
+      path: '/About',
+    },
+    {
+      title: 'Blog',
+      description: 'Read articles about technology, projects, and things I am learning.',
+      linkTitle: 'Read Articles',
+      path: '/Blog',
+    },
+    {
+      title: 'Poetry',
+      description: 'Browse poems I have written over the years.',
+      linkTitle: 'Read Poetry',
+      path: '/Poetry',
+    },
+    {
+      title: 'Philly Schvitzers',
+      description: 'Find out about the Philadelphia running group I started.',
+      linkTitle: 'Meet the Group',
+      path: '/PhillySchvitzers',
+    },
+    {
+      title: 'Contact',
+      description: 'Get in touch with me.',
+      linkTitle: 'Contact Me',
+      path: '/Contact',
+    },
+  ].map(({ path, ...card }) => ({
+    ...card,
+    link: () => {},
+    click: () => navigate(path),
+  }));
+
   return (
     <Box>
-      <Typography
-        variant="h3"
-        component="h1"
-        sx={{
-          fontWeight: 600,
-          letterSpacing: '-0.03em',
-          mb: 1,
-        }}
-      >
-        Ian Shinbrot
+      <Box sx={{ mb: { xs: 4, sm: 6 } }}>
+        <Typography
+          variant="h2"
+          component="h1"
+          sx={{
+            fontWeight: 700,
+            letterSpacing: '-0.03em',
+            mb: 2,
+            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
+          }}
+        >
+          Ian Shinbrot
+        </Typography>
+        <Typography
+          variant="h5"
+          component="p"
+          sx={{ color: 'text.secondary', fontWeight: 400, mb: 3, lineHeight: 1.8 }}
+        >
+          Vice President at BNY · Full-Stack Engineer · Philadelphia
+        </Typography>
+        <Typography variant="body1" paragraph sx={{ lineHeight: 1.8, mb: 3 }}>
+          I build and lead software projects across financial services and enterprise technology.
+          Outside of work, I write, run, and organize the Philly Schvitzers running group.
+        </Typography>
+        <Divider />
+      </Box>
+      <Typography variant="h4" component="h2" sx={{ fontWeight: 600, mb: 1, fontSize: { xs: '1.3rem', md: '1.5rem' } }}>
+        Explore
       </Typography>
-      <Typography
-        variant="subtitle1"
-        sx={{ mb: 3, maxWidth: 520 }}
-      >
-        Consultant · Philadelphia · projects, writing & running
-      </Typography>
-      <Divider sx={{ mb: 3 }} />
-      <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-        Hello — welcome to my portfolio site. I am currently a Technical Lead at World Services.
-        This site highlights projects, blog snippets, poetry, and the Philly Schvitzers running group.
-      </Typography>
-      <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-        The site is built with React, TypeScript, Material UI, and Supabase (last updated August 2026). Many posts
-        link out to full articles on Medium, and my poetry is retrieved from Supabase. GitHub projects are fetched from GitHub's API and displayed here. The poetry section is powered by Supabase, which serves as a backend database for storing and retrieving poems.
-        Use the menu to explore, and reach out via Contact if you
-        have feedback.
-      </Typography>
+      <GridComponent cards={homeCards} />
     </Box>
   );
 };
